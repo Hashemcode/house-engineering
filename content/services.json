@@ -1,0 +1,479 @@
+[
+  {
+    "id": "hvac",
+    "image": "hvac-engineer.webp",
+    "focus": "70% 40%",
+    "title": {
+      "en": "HVAC Engineering",
+      "ar": "هندسة التكييف والتهوية"
+    },
+    "tags": {
+      "en": "Chillers · VRV · AHU · Controls",
+      "ar": "المبردات · VRV · وحدات مناولة الهواء · التحكم"
+    },
+    "summary": {
+      "en": "Complete climate environments — from chilled-water plants to automated controls — engineered for Gulf heat.",
+      "ar": "بيئات مناخية متكاملة — من محطات المياه المبردة إلى أنظمة التحكم الآلي — مصممة لحرارة الخليج."
+    },
+    "paragraphs": [
+      {
+        "en": "We design, supply and install heating, ventilation and air-conditioning systems, including automated control systems that expertly manage the working climate of your facility.",
+        "ar": "نصمم ونورد ونركّب أنظمة التدفئة والتهوية والتكييف، بما في ذلك أنظمة التحكم الآلي التي تدير المناخ الداخلي لمنشأتك باحترافية."
+      },
+      {
+        "en": "In a region of extreme working temperatures, climate control is not a comfort — it is critical infrastructure. Our specialists deliver it for hospitals, factories, hotels and power stations.",
+        "ar": "في منطقة ذات درجات حرارة تشغيل قصوى، لا يُعد التحكم في المناخ رفاهية بل بنية تحتية حيوية. يقدمه متخصصونا للمستشفيات والمصانع والفنادق ومحطات الكهرباء."
+      }
+    ],
+    "points": [
+      {
+        "en": "Chiller & chilled-water systems",
+        "ar": "أنظمة المبردات والمياه المبردة"
+      },
+      {
+        "en": "VRV / VRF systems",
+        "ar": "أنظمة VRV / VRF"
+      },
+      {
+        "en": "Package & concealed units",
+        "ar": "الوحدات المجمعة والمخفية"
+      },
+      {
+        "en": "Air handling & fresh-air units",
+        "ar": "وحدات مناولة الهواء والهواء النقي"
+      },
+      {
+        "en": "Ventilation & exhaust",
+        "ar": "التهوية وشفط الهواء"
+      },
+      {
+        "en": "Controls & chemical dosing",
+        "ar": "أنظمة التحكم والجرعات الكيميائية"
+      }
+    ]
+  },
+  {
+    "id": "electrical",
+    "image": "electrical.webp",
+    "focus": "50% 30%",
+    "title": {
+      "en": "Electrical Engineering",
+      "ar": "الهندسة الكهربائية"
+    },
+    "tags": {
+      "en": "Power · Panels · Lighting",
+      "ar": "الطاقة · اللوحات · الإنارة"
+    },
+    "summary": {
+      "en": "From feasibility study and conceptual design to installation, testing and commissioning.",
+      "ar": "من دراسة الجدوى والتصميم المبدئي حتى التركيب والاختبار والتشغيل."
+    },
+    "paragraphs": [
+      {
+        "en": "We offer a complete electrical engineering service — from feasibility study to conceptual design and installation.",
+        "ar": "نقدم خدمة هندسة كهربائية متكاملة — من دراسة الجدوى إلى التصميم المبدئي والتركيب."
+      },
+      {
+        "en": "We hold preferred-contractor status with many of the region's high-profile clients, and work closely with design teams to deliver project work specifically to your requirements.",
+        "ar": "نحظى بمكانة المقاول المفضل لدى العديد من كبار العملاء في المنطقة، ونعمل جنباً إلى جنب مع فرق التصميم لتنفيذ المشاريع وفق متطلباتك تماماً."
+      }
+    ],
+    "points": [
+      {
+        "en": "Feasibility & load studies",
+        "ar": "دراسات الجدوى والأحمال"
+      },
+      {
+        "en": "Conceptual & detailed design",
+        "ar": "التصميم المبدئي والتفصيلي"
+      },
+      {
+        "en": "Distribution & panel boards",
+        "ar": "التوزيع ولوحات الكهرباء"
+      },
+      {
+        "en": "Cabling, conduits & lighting",
+        "ar": "الكابلات والمواسير والإنارة"
+      },
+      {
+        "en": "Disconnect switches & sockets",
+        "ar": "مفاتيح الفصل والمقابس"
+      },
+      {
+        "en": "Testing & commissioning",
+        "ar": "الاختبار والتشغيل"
+      }
+    ]
+  },
+  {
+    "id": "plumbing",
+    "image": "mep-ceiling.webp",
+    "focus": "50% 40%",
+    "title": {
+      "en": "Plumbing & Drainage",
+      "ar": "السباكة والصرف"
+    },
+    "tags": {
+      "en": "Water · Drainage · RO · Pools",
+      "ar": "المياه · الصرف · التحلية · المسابح"
+    },
+    "summary": {
+      "en": "Water supply, drainage and filtration systems designed for efficiency and conservation.",
+      "ar": "أنظمة إمداد المياه والصرف والترشيح مصممة للكفاءة والحفاظ على الموارد."
+    },
+    "paragraphs": [
+      {
+        "en": "Our plumbing team handles every aspect of water supply, drainage and swimming-pool filtration, designing for high water efficiency, energy performance and a sustainable site.",
+        "ar": "يتولى فريق السباكة لدينا كل جوانب إمداد المياه والصرف وترشيح المسابح، مع تصميم يحقق كفاءة عالية في استهلاك المياه والطاقة وموقعاً مستداماً."
+      },
+      {
+        "en": "We provide assessments, recommend alternatives and deliver high-functioning systems that meet each client's specific needs while helping conserve natural resources.",
+        "ar": "نقدم التقييمات ونقترح البدائل وننفذ أنظمة عالية الأداء تلبي احتياجات كل عميل وتسهم في الحفاظ على الموارد الطبيعية."
+      }
+    ],
+    "points": [
+      {
+        "en": "Water supply & pumps",
+        "ar": "إمداد المياه والمضخات"
+      },
+      {
+        "en": "Drainage systems",
+        "ar": "أنظمة الصرف"
+      },
+      {
+        "en": "HDPE infrastructure piping",
+        "ar": "أنابيب البنية التحتية HDPE"
+      },
+      {
+        "en": "RO water treatment plants",
+        "ar": "محطات تحلية المياه RO"
+      },
+      {
+        "en": "Swimming-pool filtration",
+        "ar": "ترشيح المسابح"
+      },
+      {
+        "en": "Gas systems",
+        "ar": "أنظمة الغاز"
+      }
+    ]
+  },
+  {
+    "id": "mep",
+    "image": "mep-pipes.webp",
+    "focus": "50% 50%",
+    "title": {
+      "en": "Full MEP Design & Build",
+      "ar": "تصميم وتنفيذ MEP متكامل"
+    },
+    "tags": {
+      "en": "Turnkey · Value-engineered",
+      "ar": "تسليم مفتاح · هندسة القيمة"
+    },
+    "summary": {
+      "en": "One accountable partner for mechanical, electrical and plumbing — designed, supplied and installed.",
+      "ar": "شريك واحد مسؤول عن الأعمال الميكانيكية والكهربائية والسباكة — تصميماً وتوريداً وتركيباً."
+    },
+    "paragraphs": [
+      {
+        "en": "We undertake complex MEP design-and-build projects at every scale, up to major residential, commercial and industrial developments.",
+        "ar": "ننفذ مشاريع تصميم وتنفيذ MEP المعقدة بمختلف أحجامها، وصولاً إلى المشاريع السكنية والتجارية والصناعية الكبرى."
+      },
+      {
+        "en": "Using the most innovative, energy-efficient products, we deliver state-of-the-art installations that save time and cost through construction — and a cost-effective, maintainable asset for the life of the building.",
+        "ar": "باستخدام أكثر المنتجات ابتكاراً وكفاءة في الطاقة، ننفذ تركيبات حديثة توفر الوقت والتكلفة أثناء الإنشاء — وأصلاً اقتصادياً سهل الصيانة طوال عمر المبنى."
+      }
+    ],
+    "points": [
+      {
+        "en": "Integrated MEP design",
+        "ar": "تصميم MEP متكامل"
+      },
+      {
+        "en": "Turnkey supply & installation",
+        "ar": "توريد وتركيب بنظام تسليم المفتاح"
+      },
+      {
+        "en": "Energy-efficient equipment",
+        "ar": "معدات موفرة للطاقة"
+      },
+      {
+        "en": "Value engineering",
+        "ar": "هندسة القيمة"
+      },
+      {
+        "en": "Design-team coordination",
+        "ar": "التنسيق مع فرق التصميم"
+      },
+      {
+        "en": "Detailed specification analysis",
+        "ar": "تحليل دقيق للمواصفات"
+      }
+    ]
+  },
+  {
+    "id": "fire",
+    "image": "fire-room.webp",
+    "focus": "50% 50%",
+    "title": {
+      "en": "Firefighting & Fire Alarm",
+      "ar": "مكافحة الحريق وإنذار الحريق"
+    },
+    "tags": {
+      "en": "Sprinklers · FM-200 · Novec · Foam",
+      "ar": "الرشاشات · FM-200 · نوفيك · الرغوة"
+    },
+    "summary": {
+      "en": "Life-safety systems that protect people, assets and critical operations.",
+      "ar": "أنظمة سلامة الأرواح التي تحمي الأفراد والأصول والعمليات الحيوية."
+    },
+    "paragraphs": [
+      {
+        "en": "We deliver complete fire protection — from feasibility and conceptual design to installation, testing and commissioning — for hospitals, hotels, factories, fuel stations and residential compounds.",
+        "ar": "نقدم حماية متكاملة من الحريق — من الجدوى والتصميم المبدئي إلى التركيب والاختبار والتشغيل — للمستشفيات والفنادق والمصانع ومحطات الوقود والمجمعات السكنية."
+      },
+      {
+        "en": "Our portfolio spans water-based and clean-agent suppression, including FM-200 and Novec systems for generator rooms, data rooms and sensitive spaces.",
+        "ar": "تشمل أعمالنا أنظمة الإطفاء بالمياه وبالعوامل النظيفة، بما فيها أنظمة FM-200 ونوفيك لغرف المولدات وغرف البيانات والمساحات الحساسة."
+      }
+    ],
+    "points": [
+      {
+        "en": "Sprinkler systems",
+        "ar": "أنظمة الرشاشات"
+      },
+      {
+        "en": "Fire hose cabinets & fire pumps",
+        "ar": "خزائن خراطيم الحريق ومضخات الحريق"
+      },
+      {
+        "en": "FM-200 & Novec clean agent",
+        "ar": "أنظمة FM-200 ونوفيك"
+      },
+      {
+        "en": "Foam suppression systems",
+        "ar": "أنظمة الإطفاء بالرغوة"
+      },
+      {
+        "en": "Fire detection & alarm",
+        "ar": "كشف وإنذار الحريق"
+      },
+      {
+        "en": "Testing & commissioning",
+        "ar": "الاختبار والتشغيل"
+      }
+    ]
+  },
+  {
+    "id": "network",
+    "image": "datacenter.webp",
+    "focus": "75% 50%",
+    "title": {
+      "en": "Data Center & Networks",
+      "ar": "مراكز البيانات والشبكات"
+    },
+    "tags": {
+      "en": "Fiber · Copper · UPS · GPON",
+      "ar": "الألياف · النحاس · UPS · GPON"
+    },
+    "summary": {
+      "en": "Total project management for passive and active network infrastructure.",
+      "ar": "إدارة متكاملة لمشاريع البنية التحتية للشبكات السلبية والنشطة."
+    },
+    "paragraphs": [
+      {
+        "en": "We provide total project management — from architectural design, integration and interface development to migration — backed by world-class methodologies and extensive integration experience with Tier I providers.",
+        "ar": "نقدم إدارة متكاملة للمشاريع — من التصميم المعماري والتكامل وتطوير الواجهات حتى الترحيل — مدعومة بمنهجيات عالمية وخبرة واسعة في التكامل مع مزودي الخدمة من الفئة الأولى."
+      },
+      {
+        "en": "We supply, deliver and install the full stack: structured cabling, fiber, outside plant, power protection and active network equipment.",
+        "ar": "نورد ونسلم ونركب المنظومة كاملة: الكابلات الهيكلية والألياف البصرية والشبكات الخارجية وحماية الطاقة ومعدات الشبكات النشطة."
+      }
+    ],
+    "points": [
+      {
+        "en": "CAT6 / CAT6A copper",
+        "ar": "كابلات نحاسية CAT6 / CAT6A"
+      },
+      {
+        "en": "Indoor & outdoor fiber optics",
+        "ar": "ألياف بصرية داخلية وخارجية"
+      },
+      {
+        "en": "Outside plant & fiber closures",
+        "ar": "الشبكات الخارجية ووصلات الألياف"
+      },
+      {
+        "en": "UPS up to 800 kVA",
+        "ar": "أنظمة UPS حتى 800 كيلوفولت أمبير"
+      },
+      {
+        "en": "Routers, switches & access points",
+        "ar": "الموجهات والمبدلات ونقاط الوصول"
+      },
+      {
+        "en": "Gigabit passive optical network",
+        "ar": "شبكات GPON"
+      }
+    ]
+  },
+  {
+    "id": "security",
+    "image": "access-control.webp",
+    "focus": "40% 50%",
+    "title": {
+      "en": "Security Systems",
+      "ar": "الأنظمة الأمنية"
+    },
+    "tags": {
+      "en": "CCTV · Access Control · Biometrics",
+      "ar": "كاميرات المراقبة · التحكم بالدخول · البصمة"
+    },
+    "summary": {
+      "en": "Tailor-made surveillance and access control, from a single door to hundreds of cameras across sites.",
+      "ar": "أنظمة مراقبة وتحكم بالدخول مصممة حسب الطلب، من باب واحد إلى مئات الكاميرات في مواقع متعددة."
+    },
+    "paragraphs": [
+      {
+        "en": "We design and install tailor-made CCTV systems — from a single camera to multi-site networks with hundreds of cameras — continually evaluating new technology to stay at the forefront.",
+        "ar": "نصمم ونركب أنظمة كاميرات مراقبة حسب الطلب — من كاميرا واحدة إلى شبكات متعددة المواقع تضم مئات الكاميرات — مع تقييم مستمر لأحدث التقنيات."
+      },
+      {
+        "en": "Our integrated access control range covers door controllers, card readers, biometric terminals, servers and software, including time-and-attendance with fingerprint verification.",
+        "ar": "تشمل حلول التحكم بالدخول المتكاملة وحدات تحكم الأبواب وقارئات البطاقات وأجهزة البصمة والخوادم والبرمجيات، بما فيها أنظمة الحضور والانصراف بالتحقق من البصمة."
+      }
+    ],
+    "points": [
+      {
+        "en": "CCTV surveillance",
+        "ar": "كاميرات المراقبة"
+      },
+      {
+        "en": "Multi-site camera networks",
+        "ar": "شبكات كاميرات متعددة المواقع"
+      },
+      {
+        "en": "Access control & door controllers",
+        "ar": "التحكم بالدخول ووحدات الأبواب"
+      },
+      {
+        "en": "Biometric time & attendance",
+        "ar": "الحضور والانصراف بالبصمة"
+      },
+      {
+        "en": "Card readers & proximity cards",
+        "ar": "قارئات وبطاقات التقارب"
+      },
+      {
+        "en": "Management software",
+        "ar": "برمجيات الإدارة"
+      }
+    ]
+  },
+  {
+    "id": "uc",
+    "image": "video-conf.webp",
+    "focus": "50% 50%",
+    "title": {
+      "en": "Unified Communications",
+      "ar": "الاتصالات الموحدة"
+    },
+    "tags": {
+      "en": "VoIP · Video · Conferencing",
+      "ar": "الاتصال عبر الإنترنت · الفيديو · المؤتمرات"
+    },
+    "summary": {
+      "en": "Voice, video and collaboration on one platform — from any device, anywhere.",
+      "ar": "الصوت والفيديو والتعاون على منصة واحدة — من أي جهاز وفي أي مكان."
+    },
+    "paragraphs": [
+      {
+        "en": "We integrate telephony, video conferencing, messaging and presence into a single platform that streamlines communication, collaboration and productivity.",
+        "ar": "ندمج الاتصالات الهاتفية ومؤتمرات الفيديو والمراسلة في منصة واحدة تبسّط التواصل وتعزز التعاون والإنتاجية."
+      },
+      {
+        "en": "From HD IP phones and conference phones to meeting-room video systems of every size, each solution is designed to match the client's requirements and budget.",
+        "ar": "من الهواتف الشبكية عالية الدقة وهواتف المؤتمرات إلى أنظمة الفيديو لغرف الاجتماعات بمختلف أحجامها، نصمم كل حل ليتوافق مع متطلبات العميل وميزانيته."
+      }
+    ],
+    "points": [
+      {
+        "en": "IP telephony (VoIP)",
+        "ar": "الهاتف الشبكي VoIP"
+      },
+      {
+        "en": "UC apps for desktop & mobile",
+        "ar": "تطبيقات اتصالات للحاسب والجوال"
+      },
+      {
+        "en": "Video conferencing rooms",
+        "ar": "غرف مؤتمرات الفيديو"
+      },
+      {
+        "en": "HD conference phones",
+        "ar": "هواتف مؤتمرات عالية الدقة"
+      },
+      {
+        "en": "Office software integration",
+        "ar": "التكامل مع برامج المكاتب"
+      },
+      {
+        "en": "Plug-and-play deployment",
+        "ar": "نشر فوري وسهل"
+      }
+    ]
+  },
+  {
+    "id": "maintenance",
+    "image": "maintenance.webp",
+    "focus": "50% 50%",
+    "title": {
+      "en": "Maintenance & After-Sales",
+      "ar": "الصيانة وخدمات ما بعد البيع"
+    },
+    "tags": {
+      "en": "Planned · Reactive · Contracts",
+      "ar": "وقائية · طارئة · عقود"
+    },
+    "summary": {
+      "en": "Planned and reactive maintenance that protects your investment long after handover.",
+      "ar": "صيانة وقائية وطارئة تحمي استثمارك لفترة طويلة بعد التسليم."
+    },
+    "paragraphs": [
+      {
+        "en": "Trusted by a diverse range of clients, we deliver high-quality support to critical operational facilities through reactive and planned preventative maintenance contracts.",
+        "ar": "بثقة عملاء من قطاعات متنوعة، نقدم دعماً عالي الجودة للمنشآت التشغيلية الحيوية من خلال عقود الصيانة الطارئة والوقائية المخططة."
+      },
+      {
+        "en": "Our teams serve banking and finance, industrial, commercial, pharmaceutical and retail facilities.",
+        "ar": "تخدم فرقنا منشآت القطاع المصرفي والمالي والصناعي والتجاري والدوائي وقطاع التجزئة."
+      }
+    ],
+    "points": [
+      {
+        "en": "Planned preventative maintenance",
+        "ar": "الصيانة الوقائية المخططة"
+      },
+      {
+        "en": "Reactive call-out support",
+        "ar": "دعم الأعطال الطارئة"
+      },
+      {
+        "en": "Annual maintenance contracts",
+        "ar": "عقود الصيانة السنوية"
+      },
+      {
+        "en": "Critical-facility support",
+        "ar": "دعم المنشآت الحيوية"
+      },
+      {
+        "en": "System upgrades & replacement",
+        "ar": "تحديث واستبدال الأنظمة"
+      },
+      {
+        "en": "Performance testing",
+        "ar": "اختبار الأداء"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "company": {
+    "en": "Advanced Engineering House",
+    "ar": "بيت الهندسة المتقدمة"
+  },
+  "phone": "+966 59 006 8070",
+  "phoneDigits": "966590068070",
+  "emailPrimary": "info@house-engineering.com",
+  "emailSecondary": "suleiman@house-engineering.com",
+  "linkedin": "https://www.linkedin.com/company/advanced-engineering-house-co-ltd/",
+  "facebook": "https://www.facebook.com/profile.php?id=61550670256323",
+  "address": {
+    "en": "Alghunaim Tower, 7th Floor, Office 31, Prince Mohammed bin Fahd St., West Beach District, Dammam, KSA",
+    "ar": "برج الغنيم، الدور السابع، مكتب 31، شارع الأمير محمد بن فهد، حي الشاطئ الغربي، الدمام، المملكة العربية السعودية"
+  },
+  "hours": {
+    "en": "Sat – Thu · 8:00 AM – 7:00 PM",
+    "ar": "السبت – الخميس · 8:00 ص – 7:00 م"
+  },
+  "founded": "2018"
+}

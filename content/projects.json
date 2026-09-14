@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "kempinski-al-othman-hotel",
+    "name": {
+      "en": "Kempinski Al Othman Hotel",
+      "ar": "فندق كمبينسكي العثمان"
+    },
+    "location": {
+      "en": "Al Khobar",
+      "ar": "الخبر"
+    },
+    "client": {
+      "en": "Al-Othman Holding",
+      "ar": "العثمان القابضة"
+    },
+    "tags": [
+      {
+        "en": "Firefighting · FM-200",
+        "ar": "مكافحة الحريق · FM-200"
+      },
+      {
+        "en": "HVAC Chiller",
+        "ar": "تكييف بالمبردات"
+      },
+      {
+        "en": "Gas",
+        "ar": "الغاز"
+      }
+    ],
+    "categories": [
+      "fire",
+      "hvac",
+      "plumbing"
+    ],
+    "image": "p-kempinski.webp",
+    "scope": [
+      {
+        "en": "HVAC package units — ENAB Beirut Restaurant & Lounge",
+        "ar": "وحدات تكييف مجمعة — مطعم ولاونج عنب بيروت"
+      },
+      {
+        "en": "Firefighting system — ENAB Restaurant & Lounge",
+        "ar": "نظام مكافحة الحريق — مطعم ولاونج عنب"
+      },
+      {
+        "en": "Gas system — Spanish Restaurant & Lounge",
+        "ar": "نظام الغاز — المطعم والاونج الإسباني"
+      },
+      {
+        "en": "HVAC, firefighting & electrical — Sky Lounge",
+        "ar": "التكييف ومكافحة الحريق والكهرباء — سكاي لاونج"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "prince-sultan-cardiac-center",
+    "name": {
+      "en": "Prince Sultan Cardiac Center",
+      "ar": "مركز الأمير سلطان لأمراض القلب"
+    },
+    "location": {
+      "en": "Al-Ahsa",
+      "ar": "الأحساء"
+    },
+    "client": {
+      "en": "YORK",
+      "ar": "يورك"
+    },
+    "tags": [
+      {
+        "en": "HVAC Chillers",
+        "ar": "المبردات"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      },
+      {
+        "en": "Controls",
+        "ar": "التحكم"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "electrical"
+    ],
+    "image": "p-cardiac.webp",
+    "scope": [
+      {
+        "en": "Chiller system installation (300 TR each)",
+        "ar": "تركيب نظام المبردات (300 طن تبريد لكل وحدة)"
+      },
+      {
+        "en": "Chilled-water piping, insulation & cladding",
+        "ar": "أنابيب المياه المبردة مع العزل والتغليف"
+      },
+      {
+        "en": "Chiller pumps, panels & control cabling",
+        "ar": "مضخات المبردات واللوحات وكابلات التحكم"
+      },
+      {
+        "en": "Automatic chemical dosing system",
+        "ar": "نظام الجرعات الكيميائية الآلي"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "king-fahad-hospital",
+    "name": {
+      "en": "King Fahad Hospital",
+      "ar": "مستشفى الملك فهد"
+    },
+    "location": {
+      "en": "Dammam",
+      "ar": "الدمام"
+    },
+    "client": {
+      "en": "YORK",
+      "ar": "يورك"
+    },
+    "tags": [
+      {
+        "en": "Ventilation",
+        "ar": "التهوية"
+      },
+      {
+        "en": "HVAC Chiller",
+        "ar": "تكييف بالمبردات"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "electrical"
+    ],
+    "image": "p-kingfahad.webp",
+    "scope": [
+      {
+        "en": "Ventilation for the COVID emergency room",
+        "ar": "نظام التهوية لغرفة طوارئ كورونا"
+      },
+      {
+        "en": "Medical-grade filters & grilles",
+        "ar": "فلاتر طبية وفتحات تهوية"
+      },
+      {
+        "en": "Air handling unit, ductwork & grilles",
+        "ar": "وحدة مناولة الهواء مع مجاري الهواء"
+      },
+      {
+        "en": "Panels, cabling, thermostats & pressure sensors",
+        "ar": "لوحات وكابلات وثرموستات وحساسات ضغط"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "security-forces-hospital",
+    "name": {
+      "en": "Security Forces Hospital",
+      "ar": "مستشفى قوى الأمن"
+    },
+    "location": {
+      "en": "Dammam",
+      "ar": "الدمام"
+    },
+    "client": {
+      "en": "YORK",
+      "ar": "يورك"
+    },
+    "tags": [
+      {
+        "en": "Chilled Water",
+        "ar": "المياه المبردة"
+      },
+      {
+        "en": "Fire & Alarm",
+        "ar": "الحريق والإنذار"
+      },
+      {
+        "en": "Ventilation",
+        "ar": "التهوية"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "fire",
+      "electrical"
+    ],
+    "image": "p-security.webp",
+    "scope": [
+      {
+        "en": "Replacement of chilled-water system",
+        "ar": "استبدال نظام المياه المبردة"
+      },
+      {
+        "en": "Air handling unit replacement & ductwork",
+        "ar": "استبدال وحدات مناولة الهواء ومجاري الهواء"
+      },
+      {
+        "en": "Firefighting & fire alarm system",
+        "ar": "نظام مكافحة وإنذار الحريق"
+      },
+      {
+        "en": "Testing & commissioning",
+        "ar": "الاختبار والتشغيل"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "maternity-children-hospital",
+    "name": {
+      "en": "Maternity & Children Hospital",
+      "ar": "مستشفى الولادة والأطفال"
+    },
+    "location": {
+      "en": "Al-Mubarraz",
+      "ar": "المبرز"
+    },
+    "client": {
+      "en": "Nour Co.",
+      "ar": "شركة نور"
+    },
+    "tags": [
+      {
+        "en": "HVAC",
+        "ar": "التكييف"
+      },
+      {
+        "en": "Novec / FM-200",
+        "ar": "نوفيك / FM-200"
+      },
+      {
+        "en": "Plumbing",
+        "ar": "السباكة"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "fire",
+      "plumbing"
+    ],
+    "image": "p-maternity.webp",
+    "scope": [
+      {
+        "en": "Replacement of package units (100 TR each)",
+        "ar": "استبدال الوحدات المجمعة (100 طن تبريد لكل وحدة)"
+      },
+      {
+        "en": "Ventilation, ductwork, filters & cladding",
+        "ar": "التهوية ومجاري الهواء والفلاتر والتغليف"
+      },
+      {
+        "en": "FM-200 system for generator room",
+        "ar": "نظام FM-200 لغرفة المولدات"
+      },
+      {
+        "en": "Foam suppression system",
+        "ar": "نظام الإطفاء بالرغوة"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "nakhlah-food-industries",
+    "name": {
+      "en": "Nakhlah Food Industries",
+      "ar": "مصنع نخلة للصناعات الغذائية"
+    },
+    "location": {
+      "en": "Eastern Province",
+      "ar": "المنطقة الشرقية"
+    },
+    "client": {
+      "en": "Nakhlah Co.",
+      "ar": "شركة نخلة"
+    },
+    "tags": [
+      {
+        "en": "HVAC",
+        "ar": "التكييف"
+      },
+      {
+        "en": "Fire & Alarm",
+        "ar": "الحريق والإنذار"
+      },
+      {
+        "en": "CCTV",
+        "ar": "المراقبة"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "fire",
+      "electrical",
+      "plumbing",
+      "security"
+    ],
+    "image": "p-nakhlah.webp",
+    "scope": [
+      {
+        "en": "Inverter package units, ductwork & dampers",
+        "ar": "وحدات مجمعة بتقنية الإنفرتر ومجاري الهواء"
+      },
+      {
+        "en": "Panel boards, cabling & lighting",
+        "ar": "لوحات التوزيع والكابلات والإنارة"
+      },
+      {
+        "en": "Firefighting, fire alarm, low-current & CCTV",
+        "ar": "مكافحة وإنذار الحريق والتيار الخفيف والمراقبة"
+      },
+      {
+        "en": "Plumbing, drainage, pumps & RO plant",
+        "ar": "السباكة والصرف والمضخات ومحطة التحلية"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "orange-petrol-station",
+    "name": {
+      "en": "Orange Petrol Station",
+      "ar": "محطة أورنج للوقود"
+    },
+    "location": {
+      "en": "Eastern Province",
+      "ar": "المنطقة الشرقية"
+    },
+    "client": {
+      "en": "Al-Barrak Co.",
+      "ar": "شركة البراك"
+    },
+    "tags": [
+      {
+        "en": "Firefighting",
+        "ar": "مكافحة الحريق"
+      },
+      {
+        "en": "Plumbing",
+        "ar": "السباكة"
+      },
+      {
+        "en": "CCTV",
+        "ar": "المراقبة"
+      }
+    ],
+    "categories": [
+      "fire",
+      "plumbing",
+      "security"
+    ],
+    "image": "p-orange.webp",
+    "scope": [
+      {
+        "en": "Sprinklers, fire hose cabinets & fire pumps",
+        "ar": "الرشاشات وخزائن الخراطيم ومضخات الحريق"
+      },
+      {
+        "en": "Plumbing, drainage, water supply & pumps",
+        "ar": "السباكة والصرف وإمداد المياه والمضخات"
+      },
+      {
+        "en": "HDPE infrastructure piping",
+        "ar": "أنابيب البنية التحتية HDPE"
+      },
+      {
+        "en": "CCTV system, testing & commissioning",
+        "ar": "نظام المراقبة والاختبار والتشغيل"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "tamimi-global-camp",
+    "name": {
+      "en": "Tamimi Global Camp",
+      "ar": "مجمع التميمي العالمية"
+    },
+    "location": {
+      "en": "Al Khobar",
+      "ar": "الخبر"
+    },
+    "client": {
+      "en": "Al-Tamimi Global",
+      "ar": "التميمي العالمية"
+    },
+    "tags": [
+      {
+        "en": "VRV",
+        "ar": "VRV"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      },
+      {
+        "en": "Plumbing",
+        "ar": "السباكة"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "electrical",
+      "plumbing"
+    ],
+    "image": "p-tamimi.webp",
+    "scope": [
+      {
+        "en": "VRV system — outdoor, cassette units & copper piping",
+        "ar": "نظام VRV — وحدات خارجية وكاسيت وأنابيب نحاسية"
+      },
+      {
+        "en": "Cabling, conduits, lighting, panels & switches",
+        "ar": "الكابلات والمواسير والإنارة واللوحات والمفاتيح"
+      },
+      {
+        "en": "Plumbing & drainage",
+        "ar": "السباكة والصرف"
+      },
+      {
+        "en": "Testing & commissioning",
+        "ar": "الاختبار والتشغيل"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "al-zamil-plastic-factory",
+    "name": {
+      "en": "Al-Zamil Plastic Factory",
+      "ar": "مصنع الزامل للبلاستيك"
+    },
+    "location": {
+      "en": "Dammam",
+      "ar": "الدمام"
+    },
+    "client": {
+      "en": "Al-Zamil Plastic",
+      "ar": "الزامل للبلاستيك"
+    },
+    "tags": [
+      {
+        "en": "Chiller Piping",
+        "ar": "أنابيب المبردات"
+      },
+      {
+        "en": "Controls",
+        "ar": "التحكم"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "electrical",
+      "plumbing"
+    ],
+    "image": "p-zamil.webp",
+    "scope": [
+      {
+        "en": "Replacement of chiller pipes & control system",
+        "ar": "استبدال أنابيب المبردات ونظام التحكم"
+      },
+      {
+        "en": "VRV outdoor & indoor units, copper piping",
+        "ar": "وحدات VRV الخارجية والداخلية والأنابيب النحاسية"
+      },
+      {
+        "en": "Electrical cabling, lighting & panels",
+        "ar": "الكابلات الكهربائية والإنارة واللوحات"
+      },
+      {
+        "en": "Plumbing, testing & commissioning",
+        "ar": "السباكة والاختبار والتشغيل"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "al-dughaither-palace",
+    "name": {
+      "en": "Al-Dughaither Palace",
+      "ar": "قصر الدغيثر"
+    },
+    "location": {
+      "en": "Eastern Province",
+      "ar": "المنطقة الشرقية"
+    },
+    "client": {
+      "en": "Tariq Al-Hajj Consultants",
+      "ar": "مكتب المهندس طارق الحاج"
+    },
+    "tags": [
+      {
+        "en": "VRV",
+        "ar": "VRV"
+      },
+      {
+        "en": "Fresh Air",
+        "ar": "الهواء النقي"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "electrical"
+    ],
+    "image": "p-dughayther.webp",
+    "scope": [
+      {
+        "en": "Ventilation — roof-top fans, ductwork & grilles",
+        "ar": "التهوية — مراوح سطحية ومجاري هواء"
+      },
+      {
+        "en": "VRV concealed units, diffusers & copper piping",
+        "ar": "وحدات VRV مخفية وناشرات هواء وأنابيب نحاسية"
+      },
+      {
+        "en": "Fresh-air system",
+        "ar": "نظام الهواء النقي"
+      },
+      {
+        "en": "Electrical — cabling, disconnects & panels",
+        "ar": "الكهرباء — كابلات ومفاتيح فصل ولوحات"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "itag-international-factory",
+    "name": {
+      "en": "ITAG International Factory",
+      "ar": "مصنع إيتاج الدولي"
+    },
+    "location": {
+      "en": "Jubail 2nd Industrial",
+      "ar": "الجبيل الصناعية الثانية"
+    },
+    "client": {
+      "en": "ITAG",
+      "ar": "إيتاج"
+    },
+    "tags": [
+      {
+        "en": "HVAC Package",
+        "ar": "وحدات مجمعة"
+      },
+      {
+        "en": "Ventilation",
+        "ar": "التهوية"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "p-itag.webp",
+    "scope": [
+      {
+        "en": "HVAC package-type units",
+        "ar": "وحدات تكييف مجمعة"
+      },
+      {
+        "en": "Ventilation system",
+        "ar": "نظام التهوية"
+      },
+      {
+        "en": "Air ducts, filters & cladding",
+        "ar": "مجاري الهواء والفلاتر والتغليف"
+      },
+      {
+        "en": "Testing & commissioning",
+        "ar": "الاختبار والتشغيل"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": "modon-offices",
+    "name": {
+      "en": "Modon Offices",
+      "ar": "مكاتب مدن"
+    },
+    "location": {
+      "en": "2nd Industrial City, Dammam",
+      "ar": "المدينة الصناعية الثانية، الدمام"
+    },
+    "client": {
+      "en": "YORK",
+      "ar": "يورك"
+    },
+    "tags": [
+      {
+        "en": "HVAC Package",
+        "ar": "وحدات مجمعة"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "electrical"
+    ],
+    "image": "p-modon.webp",
+    "scope": [
+      {
+        "en": "HVAC package units, ductwork & grilles",
+        "ar": "وحدات تكييف مجمعة ومجاري هواء وفتحات"
+      },
+      {
+        "en": "Electrical cabling, panels & disconnects",
+        "ar": "كابلات ولوحات ومفاتيح فصل"
+      },
+      {
+        "en": "Testing & commissioning",
+        "ar": "الاختبار والتشغيل"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": "sporty-gym",
+    "name": {
+      "en": "Sporty Gym",
+      "ar": "نادي سبورتي"
+    },
+    "location": {
+      "en": "Eastern Province",
+      "ar": "المنطقة الشرقية"
+    },
+    "client": {
+      "en": "Sporty Co.",
+      "ar": "شركة سبورتي"
+    },
+    "tags": [
+      {
+        "en": "FM-200",
+        "ar": "FM-200"
+      },
+      {
+        "en": "HVAC",
+        "ar": "التكييف"
+      },
+      {
+        "en": "Fire Alarm",
+        "ar": "إنذار الحريق"
+      }
+    ],
+    "categories": [
+      "fire",
+      "hvac"
+    ],
+    "image": "p-sporty.webp",
+    "scope": [
+      {
+        "en": "Ventilation system & ductwork",
+        "ar": "نظام التهوية ومجاري الهواء"
+      },
+      {
+        "en": "Firefighting & fire alarm",
+        "ar": "مكافحة وإنذار الحريق"
+      },
+      {
+        "en": "Testing & commissioning",
+        "ar": "الاختبار والتشغيل"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": "fitness-solutions-gym",
+    "name": {
+      "en": "Fitness Solutions Gym",
+      "ar": "نادي فتنس سوليوشنز"
+    },
+    "location": {
+      "en": "Eastern Province",
+      "ar": "المنطقة الشرقية"
+    },
+    "client": {
+      "en": "Fitness Solutions Co.",
+      "ar": "شركة حلول اللياقة"
+    },
+    "tags": [
+      {
+        "en": "HVAC Package",
+        "ar": "وحدات مجمعة"
+      },
+      {
+        "en": "Ventilation",
+        "ar": "التهوية"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "electrical"
+    ],
+    "image": "p-fitness.webp",
+    "scope": [
+      {
+        "en": "Roof-top fans & ventilation ductwork",
+        "ar": "مراوح سطحية ومجاري التهوية"
+      },
+      {
+        "en": "Package units, grilles & diffusers",
+        "ar": "وحدات مجمعة وفتحات وناشرات هواء"
+      },
+      {
+        "en": "Cabling, panels & disconnect switches",
+        "ar": "كابلات ولوحات ومفاتيح فصل"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": "al-safaniyah-project-aramco",
+    "name": {
+      "en": "Al-Safaniyah Project — Aramco",
+      "ar": "مشروع السفانية — أرامكو"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Nesma",
+      "ar": "نسما"
+    },
+    "tags": [
+      {
+        "en": "HVAC (AHU system)",
+        "ar": "التكييف (وحدات مناولة الهواء)"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "sceco-stations-al-hofuf-rafha",
+    "name": {
+      "en": "SCECO Stations — Al-Hofuf & Rafha",
+      "ar": "محطات الكهرباء — الهفوف ورفحاء"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "YORK",
+      "ar": "يورك"
+    },
+    "tags": [
+      {
+        "en": "HVAC (package system)",
+        "ar": "التكييف (وحدات مجمعة)"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "sceco-station-ghezlan",
+    "name": {
+      "en": "SCECO Station — Ghezlan",
+      "ar": "محطة الكهرباء — غزلان"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "YORK",
+      "ar": "يورك"
+    },
+    "tags": [
+      {
+        "en": "HVAC & ventilation (AHU / ACCU)",
+        "ar": "التكييف والتهوية (AHU / ACCU)"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "maaden-camp-arar",
+    "name": {
+      "en": "Maaden Camp — Arar",
+      "ar": "مجمع معادن — عرعر"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Al-Suwaidi Services",
+      "ar": "السويدي للخدمات"
+    },
+    "tags": [
+      {
+        "en": "HVAC (package) · Fire system",
+        "ar": "التكييف (وحدات مجمعة) · نظام الحريق"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "fire"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "al-fanar-offices",
+    "name": {
+      "en": "Al-Fanar Offices",
+      "ar": "مكاتب الفنار"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Al-Fanar Co.",
+      "ar": "شركة الفنار"
+    },
+    "tags": [
+      {
+        "en": "HVAC (package) · Firefighting · Fire alarm",
+        "ar": "التكييف · مكافحة الحريق · إنذار الحريق"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "fire"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "ete-factory",
+    "name": {
+      "en": "ETE Factory",
+      "ar": "مصنع ETE"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Eastern Ready Mix",
+      "ar": "الشرقية للخرسانة الجاهزة"
+    },
+    "tags": [
+      {
+        "en": "Firefighting (FM-200, FHC, foam)",
+        "ar": "مكافحة الحريق (FM-200، خزائن الخراطيم، الرغوة)"
+      }
+    ],
+    "categories": [
+      "fire"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "dynes-factory",
+    "name": {
+      "en": "Dynes Factory",
+      "ar": "مصنع داينز"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Dynes Arabia Co.",
+      "ar": "شركة داينز العربية"
+    },
+    "tags": [
+      {
+        "en": "Fire system (FM-200, FHC, sprinklers)",
+        "ar": "نظام الحريق (FM-200، خزائن الخراطيم، الرشاشات)"
+      }
+    ],
+    "categories": [
+      "fire"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "ishbilia-al-hamra-district",
+    "name": {
+      "en": "Ishbilia — Al-Hamra District",
+      "ar": "إشبيلية — حي الحمراء"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Al-Barrak Co.",
+      "ar": "شركة البراك"
+    },
+    "tags": [
+      {
+        "en": "Firefighting & fire alarm (Novec)",
+        "ar": "مكافحة وإنذار الحريق (نوفيك)"
+      }
+    ],
+    "categories": [
+      "fire"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "isrrar-villas",
+    "name": {
+      "en": "Isrrar Villas",
+      "ar": "فلل إصرار"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "LG",
+      "ar": "إل جي"
+    },
+    "tags": [
+      {
+        "en": "HVAC (concealed) · Ventilation",
+        "ar": "التكييف (وحدات مخفية) · التهوية"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "the-saudi-fish-restaurant",
+    "name": {
+      "en": "The Saudi Fish Restaurant",
+      "ar": "مطعم الأسماك السعودي"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Saudi Fishes",
+      "ar": "الأسماك السعودية"
+    },
+    "tags": [
+      {
+        "en": "HVAC (concealed system)",
+        "ar": "التكييف (وحدات مخفية)"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "al-rashid-farm",
+    "name": {
+      "en": "Al-Rashid Farm",
+      "ar": "مزرعة الراشد"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Al-Rashid Sons Co.",
+      "ar": "شركة أبناء الراشد"
+    },
+    "tags": [
+      {
+        "en": "HVAC (chiller system)",
+        "ar": "التكييف (نظام المبردات)"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  },
+  {
+    "id": "ajyal-project",
+    "name": {
+      "en": "Ajyal Project",
+      "ar": "مشروع أجيال"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Private apartments",
+      "ar": "شقق خاصة"
+    },
+    "tags": [
+      {
+        "en": "HVAC (VRV system)",
+        "ar": "التكييف (نظام VRV)"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "",
+    "scope": [],
+    "featured": false
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "YORK",
+    "logo": "partners/york.png"
+  },
+  {
+    "name": "Daikin",
+    "logo": "partners/daikin.png"
+  },
+  {
+    "name": "Zamil Group",
+    "logo": "partners/zamil.png"
+  },
+  {
+    "name": "Al-Suwaidi Holding",
+    "logo": "partners/alsuwaidi.png"
+  },
+  {
+    "name": "ETE Group",
+    "logo": "partners/ete.png"
+  },
+  {
+    "name": "GF Piping Systems",
+    "logo": "partners/gf.png"
+  },
+  {
+    "name": "Tamimi",
+    "logo": "partners/tamimi.png"
+  },
+  {
+    "name": "Front End",
+    "logo": "partners/frontend.png"
+  },
+  {
+    "name": "Shaker Group",
+    "logo": "partners/shaker.png"
+  },
+  {
+    "name": "Nour Energy",
+    "logo": "partners/nourenergy.png"
+  },
+  {
+    "name": "Tariq Hajj Architects",
+    "logo": "partners/tariqhajj.png"
+  }
+]
