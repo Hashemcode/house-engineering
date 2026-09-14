@@ -37,7 +37,7 @@ img{max-width:100%;display:block}
 .login-card h1{margin:0;font-size:26px}
 .login-card p{margin:0}
 label.stack{display:grid;gap:6px;font-weight:700;font-size:13px}
-input[type=text],input[type=email],input[type=password],input[type=tel],input[type=url],input:not([type]),textarea,select{width:100%;border:1px solid var(--line);border-radius:8px;padding:11px 12px;background:#fff;font-size:15px;transition:border-color .2s,box-shadow .2s}
+input[type=text],input[type=search],input[type=email],input[type=password],input[type=tel],input[type=url],input:not([type]),textarea,select{width:100%;border:1px solid var(--line);border-radius:8px;padding:11px 12px;background:#fff;font-size:15px;transition:border-color .2s,box-shadow .2s}
 textarea{min-height:92px;resize:vertical}
 input:focus,textarea:focus,select:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(1,152,203,.15)}
 .err{color:var(--err);font-weight:600;min-height:1.2em}
