@@ -295,8 +295,8 @@ def page_index(lang, a):
     <span class="eyebrow">{L(('MEP · Fire Protection · Networks — Dammam & Dubai', 'الأنظمة الكهروميكانيكية · الحماية من الحريق · الشبكات — الدمام ودبي'))}</span>
     <h1 class="display h1">
       <span class="line"><span>{L(('Engineering', 'نهندس'))}</span></span>
-      <span class="line"><span class="outline">{L(('the invisible', 'العمود الفقري'))}</span></span>
-      <span class="line"><span>{L(('backbone', 'الخفي'))}<span class="accent">.</span></span></span>
+      <span class="line"><span class="outline">{L(('the invisible', 'الأنظمة الخفية'))}</span></span>
+      <span class="line"><span>{L(('backbone', 'خلف كل منشأة'))}<span class="accent">.</span></span></span>
     </h1>
     <div class="hero-bottom">
       <p class="lead">{L(('We design, supply and install the mechanical, electrical, plumbing, fire-safety and network systems that keep the Kingdom’s hospitals, hotels, factories and palaces running.', 'نصمم ونورد ونركّب الأنظمة الميكانيكية والكهربائية والسباكة والسلامة من الحريق والشبكات التي تُبقي مستشفيات المملكة وفنادقها ومصانعها وقصورها تعمل بلا توقف.'))}</p>
