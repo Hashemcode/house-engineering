@@ -1,5 +1,220 @@
 [
   {
+    "id": "quarter-hotel",
+    "name": {
+      "en": "Quarter Hotel",
+      "ar": "فندق كوارتر"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Quarter Hotel",
+      "ar": "فندق كوارتر"
+    },
+    "tags": [
+      {
+        "en": "HVAC",
+        "ar": "التكييف"
+      },
+      {
+        "en": "Fire & Alarm",
+        "ar": "الحريق والإنذار"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      },
+      {
+        "en": "CCTV & GRMS",
+        "ar": "المراقبة وGRMS"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "fire",
+      "electrical",
+      "plumbing",
+      "security"
+    ],
+    "image": "p-quarter-hotel.webp",
+    "scope": [
+      {
+        "en": "Electrical, HVAC and plumbing systems",
+        "ar": "أنظمة الكهرباء والتكييف والسباكة"
+      },
+      {
+        "en": "Firefighting & fire alarm systems",
+        "ar": "أنظمة مكافحة وإنذار الحريق"
+      },
+      {
+        "en": "CCTV & low-current systems",
+        "ar": "أنظمة المراقبة والتيار الخفيف"
+      },
+      {
+        "en": "GRMS guest room management system",
+        "ar": "نظام إدارة غرف النزلاء GRMS"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "gulf-cryo-factory",
+    "name": {
+      "en": "Gulf Cryo Medical Gases Factory",
+      "ar": "مصنع جالف كرايو للغازات الطبية"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Gulf Cryo",
+      "ar": "جالف كرايو"
+    },
+    "tags": [
+      {
+        "en": "Infrastructure",
+        "ar": "البنية التحتية"
+      },
+      {
+        "en": "HVAC",
+        "ar": "التكييف"
+      },
+      {
+        "en": "Firefighting",
+        "ar": "مكافحة الحريق"
+      },
+      {
+        "en": "Electrical",
+        "ar": "الكهرباء"
+      }
+    ],
+    "categories": [
+      "hvac",
+      "fire",
+      "electrical",
+      "plumbing"
+    ],
+    "image": "p-gulfcryo.webp",
+    "scope": [
+      {
+        "en": "Infrastructure works",
+        "ar": "أعمال البنية التحتية"
+      },
+      {
+        "en": "HVAC system",
+        "ar": "نظام التكييف"
+      },
+      {
+        "en": "Firefighting system",
+        "ar": "نظام مكافحة الحريق"
+      },
+      {
+        "en": "Electrical works",
+        "ar": "الأعمال الكهربائية"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "al-mousa-clinics",
+    "name": {
+      "en": "Al-Mousa Rehabilitation Hospital — New Clinics",
+      "ar": "مستشفى الموسى للتأهيل — عيادات جديدة"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Al-Mousa Hospital",
+      "ar": "مستشفى الموسى"
+    },
+    "tags": [
+      {
+        "en": "HVAC",
+        "ar": "التكييف"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "p-almousa.webp",
+    "scope": [
+      {
+        "en": "HVAC system for the new clinics",
+        "ar": "نظام التكييف للعيادات الجديدة"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "dhl-warehouses",
+    "name": {
+      "en": "DHL Warehouses",
+      "ar": "مستودعات DHL"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "DHL",
+      "ar": "DHL"
+    },
+    "tags": [
+      {
+        "en": "HVAC Replacement",
+        "ar": "استبدال التكييف"
+      }
+    ],
+    "categories": [
+      "hvac"
+    ],
+    "image": "p-dhl.webp",
+    "scope": [
+      {
+        "en": "Replacement of the HVAC system",
+        "ar": "استبدال نظام التكييف"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "spacemaker-expansion",
+    "name": {
+      "en": "Spacemaker Factory Expansion",
+      "ar": "توسعة مصنع سبيسميكر"
+    },
+    "location": {
+      "en": "",
+      "ar": ""
+    },
+    "client": {
+      "en": "Spacemaker",
+      "ar": "سبيسميكر"
+    },
+    "tags": [
+      {
+        "en": "Firefighting",
+        "ar": "مكافحة الحريق"
+      }
+    ],
+    "categories": [
+      "fire"
+    ],
+    "image": "p-spacemaker.webp",
+    "scope": [
+      {
+        "en": "Firefighting system for the factory expansion",
+        "ar": "نظام مكافحة الحريق لتوسعة المصنع"
+      }
+    ],
+    "featured": true
+  },
+  {
     "id": "kempinski-al-othman-hotel",
     "name": {
       "en": "Kempinski Al Othman Hotel",
