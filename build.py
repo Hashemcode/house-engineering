@@ -2,7 +2,7 @@
 """Static site builder for Advanced Engineering House.
 English pages -> dist/, Arabic (RTL) pages -> dist/ar/.
 Content lives in this file as (en, ar) pairs."""
-import html, json, re, shutil
+import html, json, re, shutil, urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -49,6 +49,15 @@ EMAIL_2 = html.escape(SETTINGS.get("emailSecondary", ""))
 LINKEDIN = safe_url(SETTINGS.get("linkedin"))
 FACEBOOK = safe_url(SETTINGS.get("facebook"))
 COMPANY, ADDRESS, HOURS = SETTINGS["company"], SETTINGS["address"], SETTINGS["hours"]
+CITY = SETTINGS.get("city") or {"en": "Al Khobar", "ar": "الخبر"}
+SHORT_ADDRESS = html.escape(SETTINGS.get("shortAddress", ""))
+_addr_en = [x.strip() for x in str(ADDRESS.get("en", "")).splitlines() if x.strip()]
+MAP_Q = urllib.parse.quote(", ".join(_addr_en[:3]) or "Al Khobar, Saudi Arabia")
+
+
+def addr(L):
+    """Address with its line breaks kept (text is escaped by L first)."""
+    return L(ADDRESS).replace("\n", "<br>")
 
 SERVICES = [dict(id=re.sub(r"[^a-z0-9-]", "", s["id"]), img=s["image"], pos=s.get("focus") or "50% 50%", t=s["title"], tags=s["tags"],
                  short=s["summary"], body=s.get("paragraphs", []), points=s.get("points", [])) for s in load("services")]
@@ -66,6 +75,15 @@ LEDGER = [(p["name"], p.get("client", {}),
           for p in _projects if not p.get("image")]
 PARTNERS = [(p["logo"], p["name"]) for p in load("partners") if p.get("logo")]
 TOTAL_PROJECTS = len(_projects)
+PG = load("pages")  # editable page wording, photos and section switches
+
+
+def img_name(f):
+    return html.escape(str(f or "").strip())
+
+
+def two_lines(L, first, second, cls="outline"):
+    return f'{L(first)}<br><span class="{cls}">{L(second)}</span>'
 
 SECTORS = [
     ("commercial", ("Commercial", "تجاري"), ("Offices, retail & fuel stations", "مكاتب ومتاجر ومحطات وقود"),
@@ -104,8 +122,9 @@ def head(lang, page, title, desc, a):
         "name": "Advanced Engineering House Co.", "alternateName": "بيت الهندسة المتقدمة",
         "url": DOMAIN + "/", "logo": DOMAIN + "/assets/img/logo-dark.png", "foundingDate": "2018",
         "email": EMAIL_1, "telephone": PHONE,
-        "address": {"@type": "PostalAddress", "streetAddress": "Alghunaim Tower, 7th Floor, Office 31, Prince Mohammed bin Fahd St.",
-                    "addressLocality": "Dammam", "addressCountry": "SA"},
+        "address": {"@type": "PostalAddress", "streetAddress": " ".join(_addr_en[:2]),
+                    "addressLocality": CITY.get("en", ""), "postalCode": "".join(re.findall(r"\b\d{5}\b", " ".join(_addr_en[2:3]))),
+                    "addressCountry": "SA"},
         "sameAs": [LINKEDIN, FACEBOOK],
     }
     return f"""<!doctype html>
@@ -145,7 +164,7 @@ def header(lang, page, a):
     current = ' aria-current="page"'
     links = "".join(
         f'<li><a href="{href}"{current if href == page else ""}>{L(lbl)}</a></li>' for href, lbl in NAV)
-    mlinks = "".join(f'<a href="{href}">{L(lbl)}</a>' for href, lbl in NAV)
+    mlinks = "".join(f'<a href="{href}"{current if href == page else ""}><span>{i + 1:02d}</span>{L(lbl)}</a>' for i, (href, lbl) in enumerate(NAV))
     return f"""<header class="site-header">
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="{L(COMPANY)}"><img src="{a}assets/img/logo-light.png" alt="{L(COMPANY)}" width="796" height="219"></a>
@@ -158,8 +177,10 @@ def header(lang, page, a):
   </div>
 </header>
 <div class="mobile-menu" aria-label="{L(('Menu', 'القائمة'))}">
-  {mlinks}
-  <div class="mm-foot"><a class="ltr" href="tel:+{PHONE_RAW}" style="font-size:18px">{PHONE}</a><a href="mailto:{EMAIL_1}" style="font-size:18px">{EMAIL_1}</a></div>
+  <nav class="mm-links">{mlinks}</nav>
+  <a class="btn btn-primary mm-cta" href="contact.html">{L(('Request a proposal', 'اطلب عرض سعر'))} {ARROW}</a>
+  <div class="mm-foot"><a class="ltr" href="tel:+{PHONE_RAW}">{PHONE}</a><a href="mailto:{EMAIL_1}">{EMAIL_1}</a>
+    <a class="mm-lang" href="{other}" hreflang="{'ar' if lang == 'en' else 'en'}">{'العربية' if lang == 'en' else 'English'}</a></div>
 </div>
 """
 
@@ -170,7 +191,7 @@ def cta(lang):
   <div class="wrap cta-inner">
     <div class="reveal">
       <span class="eyebrow">{L(('Start a project', 'ابدأ مشروعك'))}</span>
-      <h2 class="display h2" style="margin-top:22px">{L(('Your future<br>starts here.', 'مستقبلك<br>يبدأ هنا.'))}</h2>
+      <h2 class="display h2" style="margin-top:22px">{L(PG['footer']['ctaLine1'])}<br>{L(PG['footer']['ctaLine2'])}</h2>
     </div>
     <div class="cta-actions reveal" data-delay="1">
       <a class="big" href="tel:+{PHONE_RAW}">{PHONE}</a>
@@ -191,7 +212,7 @@ def footer(lang, a):
     <div class="foot-grid">
       <div class="foot-brand">
         <img src="{a}assets/img/logo-light.png" alt="{L(COMPANY)}" width="796" height="219" loading="lazy">
-        <p>{L(('Mechanical, electrical, plumbing, fire-safety and network engineering across the Kingdom — since 2018.', 'هندسة الأنظمة الميكانيكية والكهربائية والسباكة والسلامة من الحريق والشبكات في أنحاء المملكة — منذ 2018.'))}</p>
+        <p>{L(PG['footer']['tagline'])}</p>
         <div class="socials">
           <a href="{LINKEDIN}" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9z"/></svg></a>
           <a href="{FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.25-1.5 1.55-1.5h1.65V3.4c-.3-.04-1.27-.12-2.4-.12-2.38 0-4 1.45-4 4.1v2.4H7.6V13h2.7v8z"/></svg></a>
@@ -200,9 +221,9 @@ def footer(lang, a):
       </div>
       <div><h4>{L(('Navigate', 'تصفح'))}</h4><ul>{nav}</ul></div>
       <div><h4>{L(('Services', 'الخدمات'))}</h4><ul>{svc}</ul></div>
-      <div class="foot-contact"><h4>{L(('Head Office — Dammam', 'المقر الرئيسي — الدمام'))}</h4>
+      <div class="foot-contact"><h4>{L(('Head Office', 'المقر الرئيسي'))} — {L(CITY)}</h4>
         <ul>
-          <li>{L(ADDRESS)}</li>
+          <li>{addr(L)}</li>
           <li><a class="ltr" href="tel:+{PHONE_RAW}">{PHONE}</a></li>
           <li><a href="mailto:{EMAIL_1}">{EMAIL_1}</a></li>
           <li><a href="mailto:{EMAIL_2}">{EMAIL_2}</a></li>
@@ -213,10 +234,15 @@ def footer(lang, a):
     <div class="foot-mega" aria-hidden="true">{L(('ADVANCED', 'بيت الهندسة'))}</div>
     <div class="foot-bar">
       <span>© <span data-year>2026</span> {L(('Advanced Engineering House Co. All rights reserved.', 'شركة بيت الهندسة المتقدمة. جميع الحقوق محفوظة.'))}</span>
-      <span>{L(('Dammam · Dubai', 'الدمام · دبي'))}</span>
+      <span>{L(CITY)} · {L(('Dubai', 'دبي'))}</span>
     </div>
   </div>
 </footer>
+<nav class="action-bar" aria-label="{L(('Quick contact', 'تواصل سريع'))}">
+  <a href="tel:+{PHONE_RAW}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 005 5L15 12l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2"/></svg>{L(('Call', 'اتصال'))}</a>
+  <a href="https://wa.me/{PHONE_RAW}" target="_blank" rel="noopener" class="ab-wa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp</a>
+  <a href="contact.html" class="ab-cta">{L(('Get a quote', 'اطلب عرض سعر'))} {ARROW}</a>
+</nav>
 <a class="wa" href="https://wa.me/{PHONE_RAW}" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
 <script src="{a}assets/js/main.js" defer></script>
 </body>
@@ -227,7 +253,7 @@ def footer(lang, a):
 def page_hero(lang, a, img, eyebrow, title_html, lead, crumb, pos="50% 50%"):
     L = tr(lang)
     return f"""<section class="hero page-hero">
-  <div class="hero-media"><img src="{a}assets/img/{img}.webp" alt="" style="object-position:{pos}" fetchpriority="high"></div>
+  <div class="hero-media"><img src="{a}assets/img/{img_name(img)}" alt="" style="object-position:{pos}" fetchpriority="high"></div>
   <div class="hero-slashes" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap hero-content">
     <nav class="crumbs" aria-label="breadcrumb"><a href="index.html">{L(('Home', 'الرئيسية'))}</a><span>/</span><span>{crumb}</span></nav>
@@ -244,7 +270,9 @@ def project_card(lang, a, p, detailed=False, lazy=True):
     chips = "".join(f"<li>{L(s)}</li>" for s in p["s"])
     scope = ""
     if detailed:
-        scope = '<ul class="card-scope">' + "".join(f"<li>{L(d)}</li>" for d in p["d"]) + "</ul>"
+        if p["d"]:
+            scope = (f'<button class="scope-toggle" type="button" aria-expanded="false">{L(("Scope of work", "نطاق العمل"))}<i aria-hidden="true"></i></button>'
+                     '<ul class="card-scope">' + "".join(f"<li>{L(d)}</li>" for d in p["d"]) + "</ul>")
     return f"""<article class="card" data-cats="{p['cats']}">
   <span class="client">{L(p['c'])}</span>
   <div class="card-media"><img src="{a}assets/img/{html.escape(p['img'])}" alt="{L(p['n'])}" loading="{'lazy' if lazy else 'eager'}"></div>
@@ -263,6 +291,20 @@ def partners_marquee(a):
 </div></div>"""
 
 
+def quote_band(lang, a, bg, P):
+    L = tr(lang)
+    return f"""<section class="quote-band">
+  <div class="bg" data-parallax style="background-image:url('{a}assets/img/{bg}')"></div>
+  <div class="wrap reveal">
+    <span class="eyebrow">{L(("Managing Director's statement", 'كلمة المدير العام'))}</span>
+    <blockquote>
+      <p>{L(P['quote'])}</p>
+      <cite>{L(P['quoteBy'])}</cite>
+    </blockquote>
+  </div>
+</section>"""
+
+
 def sectors_html(lang):
     L = tr(lang)
     return '<div class="sectors">' + "".join(
@@ -274,32 +316,28 @@ def sectors_html(lang):
 def page_index(lang, a):
     L = tr(lang)
     disc_items = "".join(f"""<li class="disc-item" data-caption="{L(s['short'])}"><a href="services.html#{s['id']}">
-  <span class="num">{i + 1:02d}</span><span><h3>{L(s['t'])}</h3><span class="tags">{L(s['tags'])}</span></span><span class="arrow">{ARROW}</span></a></li>"""
+  <span class="num">{i + 1:02d}</span><img class="disc-thumb" src="{a}assets/img/{html.escape(s['img'])}" alt="" loading="lazy" style="object-position:{html.escape(s['pos'])}"><span><h3>{L(s['t'])}</h3><span class="tags">{L(s['tags'])}</span></span><span class="arrow">{ARROW}</span></a></li>"""
                          for i, s in enumerate(SERVICES))
     disc_imgs = "".join(f'<img src="{a}assets/img/{html.escape(s["img"])}" alt="" loading="lazy" style="object-position:{html.escape(s["pos"])}">' for s in SERVICES)
     rail = "".join(project_card(lang, a, p) for p in ([p for p in PROJECTS if p["featured"]] or PROJECTS)[:12])
-    steps = [
-        (("Engineer", "الهندسة"), ("We analyse every line of the specification and design for performance and economy.", "نحلل كل تفصيل في المواصفات ونصمم لتحقيق الأداء والجدوى الاقتصادية.")),
-        (("Supply", "التوريد"), ("Equipment from world-class manufacturers — YORK, Daikin, GF and more.", "معدات من كبرى الشركات العالمية — يورك ودايكن وجي إف وغيرها.")),
-        (("Execute", "التنفيذ"), ("Skilled crews and modern machinery install, test and commission on schedule.", "فرق ماهرة ومعدات حديثة تركّب وتختبر وتشغّل في الموعد المحدد.")),
-        (("Sustain", "الاستدامة"), ("Planned and reactive maintenance keeps critical systems performing.", "صيانة وقائية وطارئة تحافظ على أداء الأنظمة الحيوية.")),
-    ]
-    steps_html = "".join(f'<div class="step reveal" data-delay="{i}"><h3>{L(t)}</h3><p>{L(d)}</p></div>' for i, (t, d) in enumerate(steps))
+    H = PG["home"]
+    steps_html = "".join(f'<div class="step reveal" data-delay="{i % 4}"><h3>{L(st["title"])}</h3><p>{L(st["text"])}</p></div>' for i, st in enumerate(H.get("steps", [])))
+    about_paras = "".join(f"<p>{L(t)}</p>" for t in H.get("aboutText", []))
 
     body = f"""<main id="main">
 <section class="hero">
-  <div class="hero-media"><img src="{a}assets/img/hero-plant.webp" alt="" fetchpriority="high"></div>
+  <div class="hero-media"><img src="{a}assets/img/{img_name(H['heroImage'])}" alt="" fetchpriority="high"></div>
   <div class="hero-slashes" aria-hidden="true"><i></i><i></i><i></i></div>
   <span class="scroll-cue" aria-hidden="true">{L(('Scroll', 'مرر'))}</span>
   <div class="wrap hero-content">
-    <span class="eyebrow">{L(('MEP · Fire Protection · Networks — Dammam & Dubai', 'الأنظمة الكهروميكانيكية · الحماية من الحريق · الشبكات — الدمام ودبي'))}</span>
+    <span class="eyebrow">{L(H['heroEyebrow'])}</span>
     <h1 class="display h1">
-      <span class="line"><span>{L(('Engineering', 'نهندس'))}</span></span>
-      <span class="line"><span class="outline">{L(('the invisible', 'الأنظمة الخفية'))}</span></span>
-      <span class="line"><span>{L(('backbone', 'خلف كل منشأة'))}<span class="accent">.</span></span></span>
+      <span class="line"><span>{L(H['heroLine1'])}</span></span>
+      <span class="line"><span class="outline">{L(H['heroLine2'])}</span></span>
+      <span class="line"><span>{L(H['heroLine3'])}<span class="accent">.</span></span></span>
     </h1>
     <div class="hero-bottom">
-      <p class="lead">{L(('We design, supply and install the mechanical, electrical, plumbing, fire-safety and network systems that keep the Kingdom’s hospitals, hotels, factories and palaces running.', 'نصمم ونورد ونركّب الأنظمة الميكانيكية والكهربائية والسباكة والسلامة من الحريق والشبكات التي تُبقي مستشفيات المملكة وفنادقها ومصانعها وقصورها تعمل بلا توقف.'))}</p>
+      <p class="lead">{L(H['heroLead'])}</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="projects.html">{L(('Explore our projects', 'استكشف مشاريعنا'))} {ARROW}</a>
         <a class="btn btn-ghost" href="contact.html">{L(('Talk to an engineer', 'تحدث مع مهندس'))}</a>
@@ -318,9 +356,8 @@ def page_index(lang, a):
   <div class="wrap statement">
     <div class="statement-text reveal">
       <span class="eyebrow">{L(('Who we are', 'من نحن'))}</span>
-      <h2 class="display h2">{L(('Built in the Kingdom.<br>Trusted by <span class="accent">its institutions.</span>', 'تأسسنا في المملكة.<br>وتثق بنا <span class="accent">مؤسساتها.</span>'))}</h2>
-      <p>{L(('Advanced Engineering House is a Saudi-registered engineering contractor headquartered in Dammam, with a branch in Dubai. Since 2018 we have grown into one of the fastest-growing MEP companies in the region.', 'بيت الهندسة المتقدمة شركة مقاولات هندسية مسجلة في المملكة العربية السعودية، مقرها الرئيسي في الدمام ولها فرع في دبي. منذ عام 2018 أصبحنا من أسرع شركات الأنظمة الكهروميكانيكية نمواً في المنطقة.'))}</p>
-      <p>{L(('Every client has distinct requirements. Our engineers stay with you from design and planning to successful handover — equipped with the latest machinery, materials and, above all, skilled and dedicated people.', 'لكل عميل متطلباته الخاصة. يرافقك مهندسونا من مرحلة التصميم والتخطيط حتى التسليم الناجح — مجهزين بأحدث المعدات والمواد، والأهم من ذلك، بكوادر ماهرة ومتفانية.'))}</p>
+      <h2 class="display h2">{two_lines(L, H['aboutTitle'], H['aboutHighlight'], 'accent')}</h2>
+      {about_paras}
       <div class="sig-list">
         <div><b>{L(('Design', 'التصميم'))}</b><span>{L(('Feasible, economic engineering', 'هندسة مجدية واقتصادية'))}</span></div>
         <div><b>{L(('Supply', 'التوريد'))}</b><span>{L(('World-class equipment', 'معدات عالمية المستوى'))}</span></div>
@@ -330,7 +367,7 @@ def page_index(lang, a):
       <a class="btn btn-dark" href="about.html" style="margin-top:36px">{L(('Our story', 'قصتنا'))} {ARROW}</a>
     </div>
     <div class="statement-media reveal" data-delay="1">
-      <div class="slash-mask"><img src="{a}assets/img/electrical.webp" alt="{L(('Engineer working on an electrical panel', 'مهندس يعمل على لوحة كهربائية'))}" loading="lazy" style="object-position:38% 30%"></div>
+      <div class="slash-mask"><img src="{a}assets/img/{img_name(H['aboutImage'])}" alt="{L(('Engineer working on an electrical panel', 'مهندس يعمل على لوحة كهربائية'))}" loading="lazy" style="object-position:38% 30%"></div>
       <div class="slash-bar"></div>
       <div class="stamp"><b data-count="2018">2018</b><span>{L(('Operating since', 'نعمل منذ'))}</span></div>
     </div>
@@ -350,7 +387,7 @@ def page_index(lang, a):
   </div>
 </section>
 
-<section class="section light">
+<!--opt:showSectors--><section class="section light">
   <div class="wrap">
     <div class="sec-head">
       <div class="reveal"><span class="eyebrow">{L(('Sectors', 'القطاعات'))}</span><h2 class="display h2">{L(('Where our work lives.', 'حيث تعمل أنظمتنا.'))}</h2></div>
@@ -358,7 +395,7 @@ def page_index(lang, a):
     </div>
     {sectors_html(lang)}
   </div>
-</section>
+</section><!--/opt-->
 
 <section class="section steel" style="padding-inline:0">
   <div class="wrap">
@@ -374,7 +411,7 @@ def page_index(lang, a):
   <div class="wrap" style="margin-top:40px"><a class="btn btn-ghost" href="projects.html">{L(('View all projects', 'عرض جميع المشاريع'))} {ARROW}</a></div>
 </section>
 
-<section class="section">
+<!--opt:showSteps--><section class="section">
   <div class="wrap">
     <div class="sec-head">
       <div class="reveal"><span class="eyebrow">{L(('How we deliver', 'منهجية العمل'))}</span><h2 class="display h2">{L(('Turnkey,<br>end to end.', 'تسليم مفتاح،<br>من البداية للنهاية.'))}</h2></div>
@@ -382,20 +419,11 @@ def page_index(lang, a):
     </div>
     <div class="process">{steps_html}</div>
   </div>
-</section>
+</section><!--/opt-->
 
-<section class="quote-band">
-  <div class="bg" data-parallax style="background-image:url('{a}assets/img/team-future.webp')"></div>
-  <div class="wrap reveal">
-    <span class="eyebrow">{L(("Managing Director's statement", 'كلمة المدير العام'))}</span>
-    <blockquote>
-      <p>{L(('Our success has been achieved through the outstanding contribution of every member of our professional, experienced and motivated team. We are determined to keep expanding what we offer our clients.', 'تحقق نجاحنا بفضل الإسهام المتميز لكل فرد من فريقنا المحترف وذي الخبرة والشغف. ونحن عازمون على مواصلة توسيع ما نقدمه لعملائنا.'))}</p>
-      <cite>{L(('Managing Director — Advanced Engineering House', 'المدير العام — بيت الهندسة المتقدمة'))}</cite>
-    </blockquote>
-  </div>
-</section>
+<!--opt:showQuote-->{quote_band(lang, a, 'team-future.webp', H)}<!--/opt-->
 
-<section class="section light" style="padding-bottom:clamp(70px,9vw,130px)">
+<!--opt:showPartners--><section class="section light" style="padding-bottom:clamp(70px,9vw,130px)">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:50px">
       <div class="reveal"><span class="eyebrow">{L(('Partners & clients', 'الشركاء والعملاء'))}</span><h2 class="display h2">{L(('In good company.', 'في صحبة الكبار.'))}</h2></div>
@@ -403,43 +431,40 @@ def page_index(lang, a):
     </div>
   </div>
   {partners_marquee(a)}
-</section>
+</section><!--/opt-->
 {cta(lang)}
 </main>
 """
-    title = L(("Advanced Engineering House — MEP, Fire Protection & Network Engineering | Dammam", "بيت الهندسة المتقدمة — الأنظمة الكهروميكانيكية والحماية من الحريق والشبكات | الدمام"))
-    desc = L(("Saudi MEP contractor since 2018. HVAC, electrical, plumbing, firefighting, data center and security systems for hospitals, hotels and industry. Dammam & Dubai.",
-              "مقاول أنظمة كهروميكانيكية سعودي منذ 2018. التكييف والكهرباء والسباكة ومكافحة الحريق ومراكز البيانات والأنظمة الأمنية للمستشفيات والفنادق والصناعة. الدمام ودبي."))
+    for key in ("showSectors", "showSteps", "showQuote", "showPartners"):
+        body = re.sub(rf"<!--opt:{key}-->(.*?)<!--/opt-->", (lambda m: m.group(1)) if H.get(key, True) else "", body, flags=re.S)
+    title = L(("Advanced Engineering House — MEP, Fire Protection & Network Engineering | Al Khobar", "بيت الهندسة المتقدمة — الأنظمة الكهروميكانيكية والحماية من الحريق والشبكات | الخبر"))
+    desc = L(("Saudi MEP contractor since 2018. HVAC, electrical, plumbing, firefighting, data center and security systems for hospitals, hotels and industry. Al Khobar & Dubai.",
+              "مقاول أنظمة كهروميكانيكية سعودي منذ 2018. التكييف والكهرباء والسباكة ومكافحة الحريق ومراكز البيانات والأنظمة الأمنية للمستشفيات والفنادق والصناعة. الخبر ودبي."))
     return title, desc, body
 
 
 def page_about(lang, a):
     L = tr(lang)
-    values = [
-        ('<path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21l1.4-7L2 9.3l7-.8z"/>', ("Exceed expectations", "تجاوز التوقعات"),
-         ("We strive to exceed our clients’ expectations and guarantee premium service in everything we undertake.", "نسعى لتجاوز توقعات عملائنا ونضمن خدمة متميزة في كل ما نقوم به.")),
-        ('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>', ("Precision in detail", "الدقة في التفاصيل"),
-         ("We analyse and estimate every detail of the specification with passion, creativity and precision.", "نحلل ونقدّر كل تفصيل في المواصفات بشغف وإبداع ودقة.")),
-        ('<path d="M3 12h4l3-8 4 16 3-8h4"/>', ("Function meets economy", "الأداء والجدوى معاً"),
-         ("Our engineers design innovative solutions that deliver both functionality and economic value.", "يصمم مهندسونا حلولاً مبتكرة تجمع بين الكفاءة الوظيفية والجدوى الاقتصادية.")),
-    ]
-    vals = "".join(f'<div class="value reveal" data-delay="{i}"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ic}</svg><h3>{L(t)}</h3><p>{L(d)}</p></div>' for i, (ic, t, d) in enumerate(values))
+    P = PG["about"]
+    icons = ['<path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21l1.4-7L2 9.3l7-.8z"/>',
+             '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
+             '<path d="M3 12h4l3-8 4 16 3-8h4"/>']
+    vals = "".join(f'<div class="value reveal" data-delay="{i % 3}"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icons[i % 3]}</svg><h3>{L(v["title"])}</h3><p>{L(v["text"])}</p></div>'
+                   for i, v in enumerate(P.get("values", [])))
+    story = "".join(f"<p>{L(t)}</p>" for t in P.get("storyText", []))
     body = f"""<main id="main">
-{page_hero(lang, a, 'team-future', L(('About us', 'من نحن')), L(('Your future<br><span class="outline">starts here.</span>', 'مستقبلك<br><span class="outline">يبدأ هنا.</span>')),
-          L(('A Saudi engineering house built on precision, people and an uncompromising standard of delivery.', 'بيت هندسي سعودي قائم على الدقة والكفاءات ومعيار لا يقبل التهاون في التنفيذ.')), L(('About', 'من نحن')))}
+{page_hero(lang, a, P['heroImage'], L(('About us', 'من نحن')), two_lines(L, P['heroLine1'], P['heroLine2']), L(P['heroLead']), L(('About', 'من نحن')))}
 <section class="section light">
   <div class="wrap statement">
     <div class="statement-text reveal">
       <span class="eyebrow">{L(('Our story', 'قصتنا'))}</span>
-      <h2 class="display h2">{L(('From Dammam,<br>for the <span class="accent">region.</span>', 'من الدمام،<br>إلى <span class="accent">المنطقة.</span>'))}</h2>
-      <p>{L(('Advanced Engineering House is registered in the Kingdom of Saudi Arabia, with its head office in Dammam and a branch in Dubai — so we can serve clients conveniently across the KSA and the Gulf.', 'بيت الهندسة المتقدمة شركة مسجلة في المملكة العربية السعودية، مقرها الرئيسي في الدمام ولها فرع في دبي — لنخدم عملاءنا بسهولة في أنحاء المملكة والخليج.'))}</p>
-      <p>{L(('Established and in full operation since 2018, we have proven our position in interiors, MEP services, exhibitions and events — becoming one of the fastest-growing companies in the region.', 'تأسست الشركة وبدأت أعمالها بالكامل منذ عام 2018، وأثبتت مكانتها في مجالات التصميم الداخلي والأنظمة الكهروميكانيكية والمعارض والفعاليات — لتصبح من أسرع الشركات نمواً في المنطقة.'))}</p>
-      <p>{L(('We provide full MEP design and engineered energy solutions as turnkey packages, with professional staff who guide each project from design and planning to successful implementation.', 'نقدم تصميماً متكاملاً للأنظمة الكهروميكانيكية وحلول طاقة هندسية بنظام تسليم المفتاح، مع كوادر محترفة ترافق كل مشروع من التصميم والتخطيط حتى التنفيذ الناجح.'))}</p>
+      <h2 class="display h2">{two_lines(L, P['storyTitle'], P['storyHighlight'], 'accent')}</h2>
+      {story}
     </div>
     <div class="statement-media reveal" data-delay="1">
-      <div class="slash-mask"><img src="{a}assets/img/hvac-engineer.webp" alt="" loading="lazy" style="object-position:72% 50%"></div>
+      <div class="slash-mask"><img src="{a}assets/img/{img_name(P['storyImage'])}" alt="" loading="lazy" style="object-position:72% 50%"></div>
       <div class="slash-bar"></div>
-      <div class="stamp"><b>2</b><span>{L(('Offices · Dammam & Dubai', 'مكتبان · الدمام ودبي'))}</span></div>
+      <div class="stamp"><b>2</b><span>{L(('Offices', 'مكتبان'))} · {L(CITY)} {L(('& Dubai', 'ودبي'))}</span></div>
     </div>
   </div>
   <div class="wrap">
@@ -460,16 +485,7 @@ def page_about(lang, a):
     <div class="values">{vals}</div>
   </div>
 </section>
-<section class="quote-band">
-  <div class="bg" data-parallax style="background-image:url('{a}assets/img/hero-plant.webp')"></div>
-  <div class="wrap reveal">
-    <span class="eyebrow">{L(("Managing Director's statement", 'كلمة المدير العام'))}</span>
-    <blockquote>
-      <p>{L(('Advanced Engineering House is committed to providing our clients with the highest level of service on all current and future works — and we look forward to working with you.', 'تلتزم بيت الهندسة المتقدمة بتقديم أعلى مستويات الخدمة لعملائها في جميع الأعمال الحالية والمستقبلية — ونتطلع للعمل معكم.'))}</p>
-      <cite>{L(('Managing Director', 'المدير العام'))}</cite>
-    </blockquote>
-  </div>
-</section>
+{quote_band(lang, a, 'hero-plant.webp', P)}
 <section class="section light">
   <div class="wrap">
     <div class="sec-head">
@@ -482,8 +498,8 @@ def page_about(lang, a):
   <div class="wrap">
     <div class="sec-head"><div class="reveal"><span class="eyebrow">{L(('Offices', 'مكاتبنا'))}</span><h2 class="display h2">{L(('Find us.', 'تجدنا هنا.'))}</h2></div></div>
     <div class="offices">
-      <div class="office reveal"><span class="tag">{L(('Head office', 'المقر الرئيسي'))}</span><h3>{L(('Dammam', 'الدمام'))}</h3><p>{L(ADDRESS)}</p><p style="margin-top:14px"><a class="ltr" href="tel:+{PHONE_RAW}">{PHONE}</a></p></div>
-      <div class="office reveal" data-delay="1"><span class="tag">{L(('Branch', 'فرع'))}</span><h3>{L(('Dubai', 'دبي'))}</h3><p>{L(('United Arab Emirates', 'الإمارات العربية المتحدة'))}</p><p style="margin-top:14px"><a href="mailto:{EMAIL_1}">{EMAIL_1}</a></p></div>
+      <div class="office reveal"><span class="tag">{L(('Head office', 'المقر الرئيسي'))}</span><h3>{L(CITY)}</h3><p>{addr(L)}</p><p style="margin-top:14px"><a class="ltr" href="tel:+{PHONE_RAW}">{PHONE}</a></p></div>
+      <div class="office reveal" data-delay="1"><span class="tag">{L(('Branch', 'فرع'))}</span><h3>{L(('Dubai', 'دبي'))}</h3><p>{L(P['dubaiAddress'])}</p><p style="margin-top:14px"><a href="mailto:{EMAIL_1}">{EMAIL_1}</a></p></div>
     </div>
   </div>
 </section>
@@ -495,7 +511,7 @@ def page_about(lang, a):
 </main>
 """
     return (L(("About Us — Advanced Engineering House", "من نحن — بيت الهندسة المتقدمة")),
-            L(("Saudi engineering contractor established in 2018, headquartered in Dammam with a branch in Dubai.", "شركة مقاولات هندسية سعودية تأسست عام 2018، مقرها الدمام ولها فرع في دبي.")), body)
+            L(("Saudi engineering contractor established in 2018, headquartered in Al Khobar with a branch in Dubai.", "شركة مقاولات هندسية سعودية تأسست عام 2018، مقرها الخبر ولها فرع في دبي.")), body)
 
 
 def page_services(lang, a):
@@ -514,15 +530,16 @@ def page_services(lang, a):
     <ul class="svc-points">{pts}</ul>
   </div>
 </article>"""
+    P = PG["services"]
     body = f"""<main id="main">
 <section class="hero page-hero">
-  <div class="hero-media"><img src="{a}assets/img/datacenter.webp" alt="" style="object-position:80% 50%" fetchpriority="high"></div>
+  <div class="hero-media"><img src="{a}assets/img/{img_name(P['heroImage'])}" alt="" style="object-position:80% 50%" fetchpriority="high"></div>
   <div class="hero-slashes" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap hero-content">
     <nav class="crumbs" aria-label="breadcrumb"><a href="index.html">{L(('Home', 'الرئيسية'))}</a><span>/</span><span>{L(('Services', 'الخدمات'))}</span></nav>
     <span class="eyebrow">{L(('Our services', 'خدماتنا'))}</span>
-    <h1 class="display h1" style="margin-top:26px">{L(('Systems that<br><span class="outline">never sleep.</span>', 'أنظمة<br><span class="outline">لا تتوقف.</span>'))}</h1>
-    <p class="lead" style="margin-top:30px">{L(('Feasible, economically viable designs for heating, ventilation, air conditioning, refrigeration, plumbing, fire protection, networks and utility distribution.', 'تصاميم مجدية واقتصادية للتدفئة والتهوية والتكييف والتبريد والسباكة والحماية من الحريق والشبكات وتوزيع المرافق.'))}</p>
+    <h1 class="display h1" style="margin-top:26px">{two_lines(L, P['heroLine1'], P['heroLine2'])}</h1>
+    <p class="lead" style="margin-top:30px">{L(P['heroLead'])}</p>
     <div class="svc-index">{idx}</div>
   </div>
 </section>
@@ -541,11 +558,12 @@ def page_projects(lang, a):
     btns = f'<button data-filter="all" aria-pressed="true">{L(("All projects", "جميع المشاريع"))}</button>' + "".join(
         f'<button data-filter="{k}" aria-pressed="false">{L(v)}</button>' for k, v in CATS.items())
     cards = "".join(project_card(lang, a, p, detailed=True) for p in PROJECTS)
-    rows = "".join(f'<tr data-cats="{cats}"><td>{i + len(PROJECTS) + 1:02d}</td><td>{L(n)}</td><td>{L(c)}</td><td>{L(s)}</td></tr>'
+    lc, ls = L(('Client', 'العميل')), L(('Scope', 'النطاق'))
+    rows = "".join(f'<tr data-cats="{cats}"><td>{i + len(PROJECTS) + 1:02d}</td><td>{L(n)}</td><td data-label="{lc}">{L(c)}</td><td data-label="{ls}">{L(s)}</td></tr>'
                    for i, (n, c, s, cats) in enumerate(LEDGER))
+    P = PG["projects"]
     body = f"""<main id="main">
-{page_hero(lang, a, 'p-kempinski', L(('Portfolio', 'أعمالنا')), L(('Delivered<br><span class="outline">with precision.</span>', 'مشاريع<br><span class="outline">نُفذت بدقة.</span>')),
-          L(('A selection of hospitals, hotels, factories, stations and residences engineered by Advanced Engineering House.', 'مجموعة مختارة من المستشفيات والفنادق والمصانع والمحطات والمساكن التي نفذتها بيت الهندسة المتقدمة.')), L(('Projects', 'المشاريع')), pos="50% 35%")}
+{page_hero(lang, a, P['heroImage'], L(('Portfolio', 'أعمالنا')), two_lines(L, P['heroLine1'], P['heroLine2']), L(P['heroLead']), L(('Projects', 'المشاريع')), pos="50% 35%")}
 <section class="section steel">
   <div class="wrap">
     <div class="filters" role="group" aria-label="{L(('Filter projects', 'تصفية المشاريع'))}">{btns}</div>
@@ -580,9 +598,9 @@ def page_contact(lang, a):
     ic_mail = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>'
     ic_pin = '<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0114 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>'
     ic_clock = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
+    P = PG["contact"]
     body = f"""<main id="main">
-{page_hero(lang, a, 'plant-dark', L(('Contact', 'تواصل معنا')), L(('Let’s build<br><span class="outline">what’s next.</span>', 'لنبنِ<br><span class="outline">المستقبل معاً.</span>')),
-          L(('Tell us about your project. An engineer will respond within one working day.', 'أخبرنا عن مشروعك، وسيتواصل معك أحد مهندسينا خلال يوم عمل واحد.')), L(('Contact', 'تواصل معنا')))}
+{page_hero(lang, a, P['heroImage'], L(('Contact', 'تواصل معنا')), two_lines(L, P['heroLine1'], P['heroLine2']), L(P['heroLead']), L(('Contact', 'تواصل معنا')))}
 <section class="section">
   <div class="wrap contact-grid">
     <div class="reveal">
@@ -590,11 +608,11 @@ def page_contact(lang, a):
         <a href="tel:+{PHONE_RAW}">{ic_phone}<div><small>{L(('Hotline', 'الخط الساخن'))}</small><b class="ltr">{PHONE}</b></div></a>
         <a href="mailto:{EMAIL_1}">{ic_mail}<div><small>{L(('General enquiries', 'الاستفسارات العامة'))}</small><b>{EMAIL_1}</b></div></a>
         <a href="mailto:{EMAIL_2}">{ic_mail}<div><small>{L(('Direct — Management', 'مباشر — الإدارة'))}</small><b>{EMAIL_2}</b></div></a>
-        <div>{ic_pin}<div><small>{L(('Head office', 'المقر الرئيسي'))}</small><b>{L(ADDRESS)}</b></div></div>
+        <div>{ic_pin}<div><small>{L(('Head office', 'المقر الرئيسي'))}</small><b>{addr(L)}</b>{f'<span class="nat-addr">{L(("National Address", "العنوان الوطني"))}: <bdi>{SHORT_ADDRESS}</bdi></span>' if SHORT_ADDRESS else ''}</div></div>
         <div>{ic_clock}<div><small>{L(('Working hours', 'ساعات العمل'))}</small><b>{L(HOURS)}</b></div></div>
       </div>
       <iframe class="map" title="{L(('Office location map', 'خريطة موقع المكتب'))}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=Alghunaim%20Tower%2C%20Prince%20Mohammed%20bin%20Fahd%20St%2C%20Dammam&z=15&output=embed"></iframe>
+        src="https://maps.google.com/maps?q={MAP_Q}&z=15&output=embed"></iframe>
     </div>
     <form class="form reveal" data-delay="1" data-endpoint="https://formsubmit.co/ajax/{EMAIL_1}" data-mailto="{EMAIL_1},{EMAIL_2}"
       data-sending="{L(('Sending…', 'جارٍ الإرسال…'))}" data-ok="{L(('Thank you — your message has been sent. We will be in touch shortly.', 'شكراً لك — تم إرسال رسالتك وسنتواصل معك قريباً.'))}"
@@ -618,7 +636,7 @@ def page_contact(lang, a):
 </main>
 """
     return (L(("Contact — Advanced Engineering House", "تواصل معنا — بيت الهندسة المتقدمة")),
-            L(("Contact Advanced Engineering House in Dammam: +966 59 006 8070, info@house-engineering.com.", "تواصل مع بيت الهندسة المتقدمة في الدمام: ‎+966 59 006 8070، info@house-engineering.com.")), body)
+            L(("Contact Advanced Engineering House in Al Khobar: +966 59 006 8070, info@house-engineering.com.", "تواصل مع بيت الهندسة المتقدمة في الخبر: ‎+966 59 006 8070، info@house-engineering.com.")), body)
 
 
 PAGES = {

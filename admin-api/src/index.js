@@ -2,7 +2,7 @@
 // Staff log in with email + password; edits are committed to the GitHub repo,
 // which triggers the GitHub Action that rebuilds and republishes the site.
 
-const FILES = ['settings', 'services', 'projects', 'partners'];
+const FILES = ['settings', 'services', 'projects', 'partners', 'pages'];
 const SESSION_HOURS = 12;
 const MAX_UPLOAD_BYTES = 6 * 1024 * 1024;
 const PBKDF2_ITERATIONS = 100000;

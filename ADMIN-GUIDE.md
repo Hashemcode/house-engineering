@@ -22,7 +22,8 @@ Change your password any time under **My account**.
 | **Projects** | The Projects page and the slider on the home page |
 | **Services** | The nine services on the Services page and the home page list |
 | **Partners** | The moving strip of partner logos |
-| **Company info** | Phone, emails, address, working hours, social links — shown on every page |
+| **Page text** | Titles, text and banner photos on each page, the Managing Director's statement, and switches to show or hide home-page sections |
+| **Company info** | Phone, emails, head-office city, address, National Address code, working hours, social links — shown on every page |
 | **Admins** | Who can sign in here (owners only) |
 
 ### Every field has two boxes
@@ -100,7 +101,8 @@ Send the person their email and temporary password privately, and ask them to ch
 | **المشاريع** | صفحة المشاريع وشريط المشاريع في الصفحة الرئيسية |
 | **الخدمات** | الخدمات التسع في صفحة الخدمات وقائمة الصفحة الرئيسية |
 | **الشركاء** | شريط شعارات الشركاء المتحرك |
-| **بيانات الشركة** | الهاتف والبريد والعنوان وساعات العمل وروابط التواصل — تظهر في كل الصفحات |
+| **نصوص الصفحات** | العناوين والنصوص وصور الواجهة في كل صفحة، وكلمة المدير العام، وأزرار إظهار أو إخفاء أقسام الصفحة الرئيسية |
+| **بيانات الشركة** | الهاتف والبريد ومدينة المقر والعنوان ورمز العنوان الوطني وساعات العمل وروابط التواصل — تظهر في كل الصفحات |
 | **المشرفون** | من يمكنه الدخول إلى اللوحة (للمالك فقط) |
 
 ### لكل حقل خانتان

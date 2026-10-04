@@ -10,9 +10,14 @@
   "linkedin": "https://www.linkedin.com/company/advanced-engineering-house-co-ltd/",
   "facebook": "https://www.facebook.com/profile.php?id=61550670256323",
   "address": {
-    "en": "Alghunaim Tower, 7th Floor, Office 31, Prince Mohammed bin Fahd St., West Beach District, Dammam, KSA",
-    "ar": "برج الغنيم، الدور السابع، مكتب 31، شارع الأمير محمد بن فهد، حي الشاطئ الغربي، الدمام، المملكة العربية السعودية"
+    "en": "7334 King Fahad Ibn Abdulaziz Saud Street\nAl Hizam Adh Dhahabi District\nAl Khobar 34432\nKingdom of Saudi Arabia",
+    "ar": "7334 الملك فهد ابن عبدالعزيز سعود\nحي الحزام الذهبي\nالخبر 34432\nالمملكة العربية السعودية"
   },
+  "city": {
+    "en": "Al Khobar",
+    "ar": "الخبر"
+  },
+  "shortAddress": "EKGC7334",
   "hours": {
     "en": "Sat – Thu · 8:00 AM – 7:00 PM",
     "ar": "السبت – الخميس · 8:00 ص – 7:00 م"

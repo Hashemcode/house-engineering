@@ -106,6 +106,19 @@
     }));
   }
 
+  // Phone: expandable "Scope of work" on project cards
+  document.querySelectorAll('.scope-toggle').forEach(btn => btn.addEventListener('click', () => {
+    const open = btn.closest('.card').classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  }));
+
+  // Phone: tuck the quick-contact bar away while the keyboard is up
+  const bar = document.querySelector('.action-bar');
+  if (bar) {
+    addEventListener('focusin', e => { if (e.target.matches('input,textarea,select')) bar.classList.add('is-away'); });
+    addEventListener('focusout', () => bar.classList.remove('is-away'));
+  }
+
   // Parallax backgrounds
   const para = document.querySelectorAll('[data-parallax]');
   if (para.length && !reduce) {

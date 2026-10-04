@@ -40,7 +40,8 @@ panel; every save commits to this repository, which triggers a rebuild and redep
 ```
 build.py                     Static site generator (templates + page assembly)
 content/
-  settings.json              Company name, phone, emails, address, hours, social links
+  settings.json              Company name, phone, emails, city, address, National Address code, hours, social links
+  pages.json                 Page wording: banners (photo + title + intro), home/about sections, MD quote, home section switches
   services.json              9 service disciplines
   projects.json              31 projects (with photo = card, without = table row)
   partners.json              11 partner logos

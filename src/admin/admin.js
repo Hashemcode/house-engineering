@@ -48,6 +48,9 @@
       f_partner: 'Company name', f_logo: 'Logo', h_logo: 'A PNG logo with a transparent background looks best.',
       f_company: 'Company name', f_phone: 'Phone / WhatsApp number', h_phone: 'Include the country code, e.g. +966 59 006 8070',
       f_email1: 'Main email', f_email2: 'Second email', f_address: 'Office address', f_hours: 'Working hours',
+      f_city: 'Head office city', h_city: 'Shown in the footer, on the About page and in Google results.',
+      h_address: 'Press Enter to start a new line — the lines are kept on the website. The map uses the English address.',
+      f_short: 'National Address short code', h_short: 'For example EKGC7334. Shown on the Contact page. Leave empty to hide.',
       f_linkedin: 'LinkedIn link', f_facebook: 'Facebook link',
       u_name: 'Name', u_role: 'Role', role_editor: 'Editor — can edit website content', role_owner: 'Owner — can also add and remove admins',
       u_add: 'Add admin', u_temp: 'Temporary password (at least 8 characters)',
@@ -55,6 +58,24 @@
       u_remove: 'Remove', u_confirm: 'Remove admin access for {name}?', u_removed: 'Access removed.', you: 'You',
       owner: 'Owner', editor: 'Editor',
       pw_current: 'Current password', pw_new: 'New password (at least 8 characters)', pw_change: 'Change password', pw_changed: 'Password changed.',
+      pages: 'Page text', pagesIntro: 'Change the titles, text and banner photos on each page. Pick a page below.',
+      pg_home: 'Home', pg_about: 'About', pg_services: 'Services', pg_projects: 'Projects', pg_contact: 'Contact', pg_footer: 'Every page (bottom)',
+      pg_open: 'Open this page on the website ↗',
+      g_banner: 'Top banner', g_who: '“Who we are” section', g_steps: '“How we deliver” section', g_quote: 'Managing Director’s statement',
+      g_sections: 'Show or hide sections', g_story: '“Our story” section', g_values: '“What drives us” section', g_offices: 'Offices',
+      g_cta: 'Blue “Start a project” banner', g_footer: 'Footer',
+      f_banner: 'Banner photo', h_banner: 'The large photo behind the title. Wide landscape photos look best.',
+      f_eyebrow: 'Small line above the title',
+      f_line1: 'Title — first line', f_line2: 'Title — second line (highlighted)', f_line3: 'Title — third line',
+      f_intro: 'Text under the title',
+      f_heading: 'Heading — first line', f_highlight: 'Heading — second line (in blue)',
+      f_text: 'Text', h_text: 'Each box is one paragraph.', f_sidePhoto: 'Photo beside the text',
+      f_steps: 'Steps', h_steps: 'Four short steps look best.', f_values: 'Values', h_values: 'Three values look best.',
+      c_title: 'Title', c_text: 'Text', addCard: 'Add another',
+      f_quote: 'Statement', f_quoteBy: 'Signed by',
+      s_sectors: 'Show “Sectors”', s_steps: 'Show “How we deliver”', s_quote: 'Show the Managing Director’s statement', s_partners: 'Show the partner logos',
+      f_dubai: 'Dubai office — address', f_ctaLine1: 'Banner title — first line', f_ctaLine2: 'Banner title — second line',
+      f_tagline: 'Short description under the logo',
     },
     ar: {
       adminTitle: 'لوحة تحكم الموقع', loginHint: 'سجّل الدخول لتحديث المشاريع والخدمات وبيانات الشركة.',
@@ -90,6 +111,9 @@
       f_partner: 'اسم الشركة', f_logo: 'الشعار', h_logo: 'يفضل شعار PNG بخلفية شفافة.',
       f_company: 'اسم الشركة', f_phone: 'رقم الهاتف / واتساب', h_phone: 'مع رمز الدولة، مثل ‎+966 59 006 8070',
       f_email1: 'البريد الرئيسي', f_email2: 'البريد الثاني', f_address: 'عنوان المكتب', f_hours: 'ساعات العمل',
+      f_city: 'مدينة المقر الرئيسي', h_city: 'تظهر أسفل الموقع وفي صفحة من نحن وفي نتائج جوجل.',
+      h_address: 'اضغط Enter لبدء سطر جديد — تظهر الأسطر كما هي في الموقع. الخريطة تستخدم العنوان الإنجليزي.',
+      f_short: 'رمز العنوان الوطني المختصر', h_short: 'مثل EKGC7334. يظهر في صفحة تواصل معنا. اتركه فارغاً لإخفائه.',
       f_linkedin: 'رابط لينكدإن', f_facebook: 'رابط فيسبوك',
       u_name: 'الاسم', u_role: 'الصلاحية', role_editor: 'محرر — يمكنه تعديل محتوى الموقع', role_owner: 'مالك — يمكنه أيضاً إضافة وإزالة المشرفين',
       u_add: 'إضافة مشرف', u_temp: 'كلمة مرور مؤقتة (8 أحرف على الأقل)',
@@ -97,6 +121,24 @@
       u_remove: 'إزالة', u_confirm: 'إزالة صلاحية {name}؟', u_removed: 'تمت إزالة الصلاحية.', you: 'أنت',
       owner: 'مالك', editor: 'محرر',
       pw_current: 'كلمة المرور الحالية', pw_new: 'كلمة المرور الجديدة (8 أحرف على الأقل)', pw_change: 'تغيير كلمة المرور', pw_changed: 'تم تغيير كلمة المرور.',
+      pages: 'نصوص الصفحات', pagesIntro: 'غيّر العناوين والنصوص وصور الواجهة في كل صفحة. اختر الصفحة من الأسفل.',
+      pg_home: 'الرئيسية', pg_about: 'من نحن', pg_services: 'الخدمات', pg_projects: 'المشاريع', pg_contact: 'تواصل معنا', pg_footer: 'كل الصفحات (الأسفل)',
+      pg_open: 'افتح هذه الصفحة في الموقع ↗',
+      g_banner: 'الواجهة العلوية', g_who: 'قسم «من نحن»', g_steps: 'قسم «منهجية العمل»', g_quote: 'كلمة المدير العام',
+      g_sections: 'إظهار أو إخفاء الأقسام', g_story: 'قسم «قصتنا»', g_values: 'قسم «ما يحركنا»', g_offices: 'المكاتب',
+      g_cta: 'الشريط الأزرق «ابدأ مشروعك»', g_footer: 'أسفل الصفحة',
+      f_banner: 'صورة الواجهة', h_banner: 'الصورة الكبيرة خلف العنوان. الصور الأفقية العريضة هي الأفضل.',
+      f_eyebrow: 'السطر الصغير فوق العنوان',
+      f_line1: 'العنوان — السطر الأول', f_line2: 'العنوان — السطر الثاني (مميز)', f_line3: 'العنوان — السطر الثالث',
+      f_intro: 'النص أسفل العنوان',
+      f_heading: 'العنوان — السطر الأول', f_highlight: 'العنوان — السطر الثاني (باللون الأزرق)',
+      f_text: 'النص', h_text: 'كل مربع فقرة واحدة.', f_sidePhoto: 'الصورة بجانب النص',
+      f_steps: 'الخطوات', h_steps: 'أربع خطوات قصيرة هي الأفضل.', f_values: 'القيم', h_values: 'ثلاث قيم هي الأفضل.',
+      c_title: 'العنوان', c_text: 'النص', addCard: 'إضافة المزيد',
+      f_quote: 'الكلمة', f_quoteBy: 'التوقيع',
+      s_sectors: 'إظهار «القطاعات»', s_steps: 'إظهار «منهجية العمل»', s_quote: 'إظهار كلمة المدير العام', s_partners: 'إظهار شعارات الشركاء',
+      f_dubai: 'مكتب دبي — العنوان', f_ctaLine1: 'عنوان الشريط — السطر الأول', f_ctaLine2: 'عنوان الشريط — السطر الثاني',
+      f_tagline: 'وصف قصير أسفل الشعار',
     },
   };
 
@@ -142,7 +184,7 @@
   // ------------------------------------------------------------ state
   const S = {
     token: store.get('aeh-token'), user: null, content: null,
-    view: 'projects', edit: null, draft: null, dirty: false, saving: false,
+    view: 'projects', pageTab: 'home', edit: null, draft: null, dirty: false, saving: false,
     previews: {}, users: null, deploy: 'live', queue: Promise.resolve(),
   };
 
@@ -221,11 +263,68 @@
     { type: 'text', key: 'phone', label: 'f_phone', hint: 'h_phone', input: 'tel', required: true },
     { type: 'text', key: 'emailPrimary', label: 'f_email1', input: 'email', required: true },
     { type: 'text', key: 'emailSecondary', label: 'f_email2', input: 'email' },
-    { type: 'bi', key: 'address', label: 'f_address', multiline: true },
+    { type: 'bi', key: 'city', label: 'f_city', hint: 'h_city', required: true },
+    { type: 'bi', key: 'address', label: 'f_address', hint: 'h_address', multiline: true },
+    { type: 'text', key: 'shortAddress', label: 'f_short', hint: 'h_short' },
     { type: 'bi', key: 'hours', label: 'f_hours' },
     { type: 'text', key: 'linkedin', label: 'f_linkedin', input: 'url' },
     { type: 'text', key: 'facebook', label: 'f_facebook', input: 'url' },
   ];
+
+  const hero = (pg, three) => [
+    { type: 'group', label: 'g_banner' },
+    { type: 'image', key: `${pg}.heroImage`, label: 'f_banner', hint: 'h_banner', required: true },
+    ...(pg === 'home' ? [{ type: 'bi', key: 'home.heroEyebrow', label: 'f_eyebrow' }] : []),
+    { type: 'bi', key: `${pg}.heroLine1`, label: 'f_line1', required: true },
+    { type: 'bi', key: `${pg}.heroLine2`, label: 'f_line2' },
+    ...(three ? [{ type: 'bi', key: `${pg}.heroLine3`, label: 'f_line3' }] : []),
+    { type: 'bi', key: `${pg}.heroLead`, label: 'f_intro', multiline: true },
+  ];
+  const PAGE_FORMS = {
+    home: { url: '', fields: [
+      ...hero('home', true),
+      { type: 'group', label: 'g_who' },
+      { type: 'bi', key: 'home.aboutTitle', label: 'f_heading', required: true },
+      { type: 'bi', key: 'home.aboutHighlight', label: 'f_highlight' },
+      { type: 'bilist', key: 'home.aboutText', label: 'f_text', hint: 'h_text', multiline: true },
+      { type: 'image', key: 'home.aboutImage', label: 'f_sidePhoto', required: true },
+      { type: 'group', label: 'g_steps' },
+      { type: 'cards', key: 'home.steps', label: 'f_steps', hint: 'h_steps' },
+      { type: 'group', label: 'g_quote' },
+      { type: 'bi', key: 'home.quote', label: 'f_quote', multiline: true },
+      { type: 'bi', key: 'home.quoteBy', label: 'f_quoteBy' },
+      { type: 'group', label: 'g_sections' },
+      { type: 'toggle', key: 'home.showSectors', label: 's_sectors' },
+      { type: 'toggle', key: 'home.showSteps', label: 's_steps' },
+      { type: 'toggle', key: 'home.showQuote', label: 's_quote' },
+      { type: 'toggle', key: 'home.showPartners', label: 's_partners' },
+    ] },
+    about: { url: 'about.html', fields: [
+      ...hero('about'),
+      { type: 'group', label: 'g_story' },
+      { type: 'bi', key: 'about.storyTitle', label: 'f_heading', required: true },
+      { type: 'bi', key: 'about.storyHighlight', label: 'f_highlight' },
+      { type: 'bilist', key: 'about.storyText', label: 'f_text', hint: 'h_text', multiline: true },
+      { type: 'image', key: 'about.storyImage', label: 'f_sidePhoto', required: true },
+      { type: 'group', label: 'g_values' },
+      { type: 'cards', key: 'about.values', label: 'f_values', hint: 'h_values' },
+      { type: 'group', label: 'g_quote' },
+      { type: 'bi', key: 'about.quote', label: 'f_quote', multiline: true },
+      { type: 'bi', key: 'about.quoteBy', label: 'f_quoteBy' },
+      { type: 'group', label: 'g_offices' },
+      { type: 'bi', key: 'about.dubaiAddress', label: 'f_dubai' },
+    ] },
+    services: { url: 'services.html', fields: hero('services') },
+    projects: { url: 'projects.html', fields: hero('projects') },
+    contact: { url: 'contact.html', fields: hero('contact') },
+    footer: { url: '', fields: [
+      { type: 'group', label: 'g_cta' },
+      { type: 'bi', key: 'footer.ctaLine1', label: 'f_ctaLine1', required: true },
+      { type: 'bi', key: 'footer.ctaLine2', label: 'f_ctaLine2' },
+      { type: 'group', label: 'g_footer' },
+      { type: 'bi', key: 'footer.tagline', label: 'f_tagline', multiline: true },
+    ] },
+  };
 
   // ------------------------------------------------------------ field renderers
   const hintHtml = f => (f.hint ? `<span class="hint">${esc(t(f.hint))}</span>` : '');
@@ -273,6 +372,19 @@
         `<label class="check"><input type="checkbox" data-check="${f.key}" value="${v}" ${vals.includes(v) ? 'checked' : ''}>${esc(uiLang === 'ar' ? ar : en)}</label>`).join('')}</div></div>`;
     },
 
+    group: f => `<h2 class="group-title">${esc(t(f.label))}</h2>`,
+
+    cards: f => {
+      const rows = getPath(S.draft, f.key) || [];
+      const pair = (j, part, lbl) => `<div class="bi">${control(`${f.key}.${j}.${part}.en`, 'ltr', part === 'text', `${t(lbl)} ${j + 1} English`)}${control(`${f.key}.${j}.${part}.ar`, 'rtl', part === 'text', `${t(lbl)} ${j + 1} Arabic`)}</div>`;
+      return `<div class="field">${labelHtml(f)}<div class="cards">${rows.map((_, j) => `<div class="card-row">
+          <div class="card-row-head"><b>${j + 1}</b><button type="button" class="icon danger" data-action="row-del" data-key="${f.key}" data-j="${j}" aria-label="${esc(t('delete'))}">✕</button></div>
+          <span class="lang-tag">${esc(t('c_title'))}</span>${pair(j, 'title', 'c_title')}
+          <span class="lang-tag">${esc(t('c_text'))}</span>${pair(j, 'text', 'c_text')}
+        </div>`).join('')}</div>
+        <button type="button" class="btn small" data-action="row-add" data-kind="card" data-key="${f.key}">+ ${esc(t('addCard'))}</button></div>`;
+    },
+
     toggle: f => `<div class="field"><label class="toggle">
         <input type="checkbox" data-path="${f.key}" data-bool ${getPath(S.draft, f.key) ? 'checked' : ''}><span class="switch"></span>
         <span><b>${esc(t(f.label))}</b>${f.hint ? `<span class="muted small">${esc(t(f.hint))}</span>` : ''}</span></label></div>`,
@@ -304,7 +416,7 @@
     if (!S.user) return renderLogin();
     const nav = [
       ['projects', S.content.projects.data.length], ['services', S.content.services.data.length],
-      ['partners', S.content.partners.data.length], ['settings'],
+      ['partners', S.content.partners.data.length], ['pages'], ['settings'],
       ...(S.user.role === 'owner' ? [['users']] : []), ['account'],
     ];
     app.innerHTML = `<div class="shell">
@@ -324,6 +436,7 @@
 
   function viewHtml() {
     if (S.view === 'settings') return settingsHtml();
+    if (S.view === 'pages') return pagesHtml();
     if (S.view === 'users') return usersHtml();
     if (S.view === 'account') return accountHtml();
     return S.edit ? editorHtml() : listHtml();
@@ -366,6 +479,17 @@
   function settingsHtml() {
     return head(t('settings'), t('settingsIntro')) +
       `<form class="editor" data-form="settings" novalidate>${SETTINGS_FIELDS.map(f => FIELD[f.type](f)).join('')}
+        <div class="savebar"><button class="btn primary" type="submit" ${S.saving ? 'disabled' : ''}>${esc(t(S.saving ? 'saving' : 'savePublish'))}</button></div>
+      </form>`;
+  }
+
+  function pagesHtml() {
+    const form = PAGE_FORMS[S.pageTab];
+    const tabs = Object.keys(PAGE_FORMS).map(k => `<button type="button" class="tab ${k === S.pageTab ? 'on' : ''}" data-action="pgtab" data-tab="${k}">${esc(t(`pg_${k}`))}</button>`).join('');
+    const site = `../${uiLang === 'ar' ? 'ar/' : ''}${form.url}`;
+    return head(t('pages'), t('pagesIntro')) + `<div class="tabs" role="tablist">${tabs}</div>
+      <a class="link small open-page" href="${site}" target="_blank" rel="noopener">${esc(t('pg_open'))}</a>
+      <form class="editor" data-form="pages" novalidate>${form.fields.map(f => FIELD[f.type](f)).join('')}
         <div class="savebar"><button class="btn primary" type="submit" ${S.saving ? 'disabled' : ''}>${esc(t(S.saving ? 'saving' : 'savePublish'))}</button></div>
       </form>`;
   }
@@ -453,9 +577,14 @@
 
   function cleanDraft(fields) {
     for (const f of fields) {
+      if (!f.key) continue;
       const v = getPath(S.draft, f.key);
       if (f.type === 'bi' && v) setPath(S.draft, f.key, { en: (v.en || '').trim(), ar: (v.ar || '').trim() });
       if (f.type === 'text' && typeof v === 'string') setPath(S.draft, f.key, v.trim());
+      if (f.type === 'cards') {
+        const tr = b => ({ en: (b?.en || '').trim(), ar: (b?.ar || '').trim() });
+        setPath(S.draft, f.key, (v || []).map(r => ({ title: tr(r.title), text: tr(r.text) })).filter(r => r.title.en || r.title.ar || r.text.en || r.text.ar));
+      }
       if (f.type === 'bilist') {
         setPath(S.draft, f.key, (v || []).map(r => ({ en: (r.en || '').trim(), ar: (r.ar || '').trim() })).filter(r => r.en || r.ar));
       }
@@ -499,6 +628,18 @@
     render();
     if (await saveFile('settings', data, t('saved'))) S.dirty = false;
     S.draft = clone(S.content.settings.data);
+    render();
+  }
+
+  async function submitPages() {
+    const fields = PAGE_FORMS[S.pageTab].fields;
+    const miss = missingRequired(fields);
+    if (miss) return toast(t('required') + miss, 'err');
+    for (const k of Object.keys(PAGE_FORMS)) cleanDraft(PAGE_FORMS[k].fields);
+    const data = clone(S.draft);
+    render();
+    if (await saveFile('pages', data, t('saved'))) S.dirty = false;
+    S.draft = clone(S.content.pages.data);
     render();
   }
 
@@ -548,7 +689,7 @@
 
   function go(view) {
     S.view = view; S.edit = null; S.dirty = false;
-    S.draft = view === 'settings' ? clone(S.content.settings.data) : null;
+    S.draft = view === 'settings' || view === 'pages' ? clone(S.content[view].data) : null;
     render();
     window.scrollTo(0, 0);
     if (view === 'users') loadUsers();
@@ -595,7 +736,7 @@
     },
     'row-add': b => {
       const rows = getPath(S.draft, b.dataset.key) || [];
-      rows.push(bi());
+      rows.push(b.dataset.kind === 'card' ? { title: bi(), text: bi() } : bi());
       setPath(S.draft, b.dataset.key, rows);
       S.dirty = true;
       render();
@@ -603,6 +744,7 @@
       inputs[0]?.focus();
     },
     'row-del': b => { getPath(S.draft, b.dataset.key).splice(+b.dataset.j, 1); S.dirty = true; render(); },
+    pgtab: b => { S.pageTab = b.dataset.tab; render(); },
     'img-clear': b => { setPath(S.draft, b.dataset.key, ''); S.dirty = true; render(); },
     'user-del': async b => {
       if (!confirm(t('u_confirm', { name: b.dataset.name }))) return;
@@ -628,6 +770,7 @@
     },
     edit: () => submitEdit(),
     settings: () => submitSettings(),
+    pages: () => submitPages(),
     'user-add': async form => {
       try {
         await api('/api/users', { method: 'POST', body: { name: form.name.value, email: form.email.value, password: form.password.value, role: form.role.value } });

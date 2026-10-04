@@ -1,0 +1,74 @@
+{
+  "home": {
+    "heroImage": "hero-plant.webp",
+    "heroEyebrow": { "en": "MEP · Fire Protection · Networks — Al Khobar & Dubai", "ar": "الأنظمة الكهروميكانيكية · الحماية من الحريق · الشبكات — الخبر ودبي" },
+    "heroLine1": { "en": "Engineering", "ar": "نهندس" },
+    "heroLine2": { "en": "the invisible", "ar": "الأنظمة الخفية" },
+    "heroLine3": { "en": "backbone", "ar": "خلف كل منشأة" },
+    "heroLead": { "en": "We design, supply and install the mechanical, electrical, plumbing, fire-safety and network systems that keep the Kingdom’s hospitals, hotels, factories and palaces running.", "ar": "نصمم ونورد ونركّب الأنظمة الميكانيكية والكهربائية والسباكة والسلامة من الحريق والشبكات التي تُبقي مستشفيات المملكة وفنادقها ومصانعها وقصورها تعمل بلا توقف." },
+    "aboutTitle": { "en": "Built in the Kingdom.", "ar": "تأسسنا في المملكة." },
+    "aboutHighlight": { "en": "Trusted by its institutions.", "ar": "وتثق بنا مؤسساتها." },
+    "aboutText": [
+      { "en": "Advanced Engineering House is a Saudi-registered engineering contractor headquartered in Al Khobar, with a branch in Dubai. Since 2018 we have grown into one of the fastest-growing MEP companies in the region.", "ar": "بيت الهندسة المتقدمة شركة مقاولات هندسية مسجلة في المملكة العربية السعودية، مقرها الرئيسي في الخبر ولها فرع في دبي. منذ عام 2018 أصبحنا من أسرع شركات الأنظمة الكهروميكانيكية نمواً في المنطقة." },
+      { "en": "Every client has distinct requirements. Our engineers stay with you from design and planning to successful handover — equipped with the latest machinery, materials and, above all, skilled and dedicated people.", "ar": "لكل عميل متطلباته الخاصة. يرافقك مهندسونا من مرحلة التصميم والتخطيط حتى التسليم الناجح — مجهزين بأحدث المعدات والمواد، والأهم من ذلك، بكوادر ماهرة ومتفانية." }
+    ],
+    "aboutImage": "electrical.webp",
+    "steps": [
+      { "title": { "en": "Engineer", "ar": "الهندسة" }, "text": { "en": "We analyse every line of the specification and design for performance and economy.", "ar": "نحلل كل تفصيل في المواصفات ونصمم لتحقيق الأداء والجدوى الاقتصادية." } },
+      { "title": { "en": "Supply", "ar": "التوريد" }, "text": { "en": "Equipment from world-class manufacturers — YORK, Daikin, GF and more.", "ar": "معدات من كبرى الشركات العالمية — يورك ودايكن وجي إف وغيرها." } },
+      { "title": { "en": "Execute", "ar": "التنفيذ" }, "text": { "en": "Skilled crews and modern machinery install, test and commission on schedule.", "ar": "فرق ماهرة ومعدات حديثة تركّب وتختبر وتشغّل في الموعد المحدد." } },
+      { "title": { "en": "Sustain", "ar": "الاستدامة" }, "text": { "en": "Planned and reactive maintenance keeps critical systems performing.", "ar": "صيانة وقائية وطارئة تحافظ على أداء الأنظمة الحيوية." } }
+    ],
+    "quote": { "en": "Our success has been achieved through the outstanding contribution of every member of our professional, experienced and motivated team. We are determined to keep expanding what we offer our clients.", "ar": "تحقق نجاحنا بفضل الإسهام المتميز لكل فرد من فريقنا المحترف وذي الخبرة والشغف. ونحن عازمون على مواصلة توسيع ما نقدمه لعملائنا." },
+    "quoteBy": { "en": "Managing Director — Advanced Engineering House", "ar": "المدير العام — بيت الهندسة المتقدمة" },
+    "showSectors": true,
+    "showSteps": true,
+    "showQuote": true,
+    "showPartners": true
+  },
+  "about": {
+    "heroImage": "team-future.webp",
+    "heroLine1": { "en": "Your future", "ar": "مستقبلك" },
+    "heroLine2": { "en": "starts here.", "ar": "يبدأ هنا." },
+    "heroLead": { "en": "A Saudi engineering house built on precision, people and an uncompromising standard of delivery.", "ar": "بيت هندسي سعودي قائم على الدقة والكفاءات ومعيار لا يقبل التهاون في التنفيذ." },
+    "storyTitle": { "en": "From Al Khobar,", "ar": "من الخبر،" },
+    "storyHighlight": { "en": "for the region.", "ar": "إلى المنطقة." },
+    "storyText": [
+      { "en": "Advanced Engineering House is registered in the Kingdom of Saudi Arabia, with its head office in Al Khobar and a branch in Dubai — so we can serve clients conveniently across the KSA and the Gulf.", "ar": "بيت الهندسة المتقدمة شركة مسجلة في المملكة العربية السعودية، مقرها الرئيسي في الخبر ولها فرع في دبي — لنخدم عملاءنا بسهولة في أنحاء المملكة والخليج." },
+      { "en": "Established and in full operation since 2018, we have proven our position in interiors, MEP services, exhibitions and events — becoming one of the fastest-growing companies in the region.", "ar": "تأسست الشركة وبدأت أعمالها بالكامل منذ عام 2018، وأثبتت مكانتها في مجالات التصميم الداخلي والأنظمة الكهروميكانيكية والمعارض والفعاليات — لتصبح من أسرع الشركات نمواً في المنطقة." },
+      { "en": "We provide full MEP design and engineered energy solutions as turnkey packages, with professional staff who guide each project from design and planning to successful implementation.", "ar": "نقدم تصميماً متكاملاً للأنظمة الكهروميكانيكية وحلول طاقة هندسية بنظام تسليم المفتاح، مع كوادر محترفة ترافق كل مشروع من التصميم والتخطيط حتى التنفيذ الناجح." }
+    ],
+    "storyImage": "hvac-engineer.webp",
+    "values": [
+      { "title": { "en": "Exceed expectations", "ar": "تجاوز التوقعات" }, "text": { "en": "We strive to exceed our clients’ expectations and guarantee premium service in everything we undertake.", "ar": "نسعى لتجاوز توقعات عملائنا ونضمن خدمة متميزة في كل ما نقوم به." } },
+      { "title": { "en": "Precision in detail", "ar": "الدقة في التفاصيل" }, "text": { "en": "We analyse and estimate every detail of the specification with passion, creativity and precision.", "ar": "نحلل ونقدّر كل تفصيل في المواصفات بشغف وإبداع ودقة." } },
+      { "title": { "en": "Function meets economy", "ar": "الأداء والجدوى معاً" }, "text": { "en": "Our engineers design innovative solutions that deliver both functionality and economic value.", "ar": "يصمم مهندسونا حلولاً مبتكرة تجمع بين الكفاءة الوظيفية والجدوى الاقتصادية." } }
+    ],
+    "quote": { "en": "Advanced Engineering House is committed to providing our clients with the highest level of service on all current and future works — and we look forward to working with you.", "ar": "تلتزم بيت الهندسة المتقدمة بتقديم أعلى مستويات الخدمة لعملائها في جميع الأعمال الحالية والمستقبلية — ونتطلع للعمل معكم." },
+    "quoteBy": { "en": "Managing Director", "ar": "المدير العام" },
+    "dubaiAddress": { "en": "United Arab Emirates", "ar": "الإمارات العربية المتحدة" }
+  },
+  "services": {
+    "heroImage": "datacenter.webp",
+    "heroLine1": { "en": "Systems that", "ar": "أنظمة" },
+    "heroLine2": { "en": "never sleep.", "ar": "لا تتوقف." },
+    "heroLead": { "en": "Feasible, economically viable designs for heating, ventilation, air conditioning, refrigeration, plumbing, fire protection, networks and utility distribution.", "ar": "تصاميم مجدية واقتصادية للتدفئة والتهوية والتكييف والتبريد والسباكة والحماية من الحريق والشبكات وتوزيع المرافق." }
+  },
+  "projects": {
+    "heroImage": "p-kempinski.webp",
+    "heroLine1": { "en": "Delivered", "ar": "مشاريع" },
+    "heroLine2": { "en": "with precision.", "ar": "نُفذت بدقة." },
+    "heroLead": { "en": "A selection of hospitals, hotels, factories, stations and residences engineered by Advanced Engineering House.", "ar": "مجموعة مختارة من المستشفيات والفنادق والمصانع والمحطات والمساكن التي نفذتها بيت الهندسة المتقدمة." }
+  },
+  "contact": {
+    "heroImage": "plant-dark.webp",
+    "heroLine1": { "en": "Let’s build", "ar": "لنبنِ" },
+    "heroLine2": { "en": "what’s next.", "ar": "المستقبل معاً." },
+    "heroLead": { "en": "Tell us about your project. An engineer will respond within one working day.", "ar": "أخبرنا عن مشروعك، وسيتواصل معك أحد مهندسينا خلال يوم عمل واحد." }
+  },
+  "footer": {
+    "ctaLine1": { "en": "Your future", "ar": "مستقبلك" },
+    "ctaLine2": { "en": "starts here.", "ar": "يبدأ هنا." },
+    "tagline": { "en": "Mechanical, electrical, plumbing, fire-safety and network engineering across the Kingdom — since 2018.", "ar": "هندسة الأنظمة الميكانيكية والكهربائية والسباكة والسلامة من الحريق والشبكات في أنحاء المملكة — منذ 2018." }
+  }
+}
