@@ -1,11 +1,11 @@
 [
   {
-    "name": "YORK",
-    "logo": "partners/york.png"
-  },
-  {
     "name": "Daikin",
     "logo": "partners/daikin.png"
+  },
+  {
+    "name": "YORK",
+    "logo": "partners/york.png"
   },
   {
     "name": "Zamil Group",
