@@ -215,60 +215,6 @@
     "featured": true
   },
   {
-    "id": "kempinski-al-othman-hotel",
-    "name": {
-      "en": "Kempinski Al Othman Hotel",
-      "ar": "فندق كمبينسكي العثمان"
-    },
-    "location": {
-      "en": "Al Khobar",
-      "ar": "الخبر"
-    },
-    "client": {
-      "en": "Al-Othman Holding",
-      "ar": "العثمان القابضة"
-    },
-    "tags": [
-      {
-        "en": "Firefighting · FM-200",
-        "ar": "مكافحة الحريق · FM-200"
-      },
-      {
-        "en": "HVAC Chiller",
-        "ar": "تكييف بالمبردات"
-      },
-      {
-        "en": "Gas",
-        "ar": "الغاز"
-      }
-    ],
-    "categories": [
-      "fire",
-      "hvac",
-      "plumbing"
-    ],
-    "image": "p-kempinski.webp",
-    "scope": [
-      {
-        "en": "HVAC package units — ENAB Beirut Restaurant & Lounge",
-        "ar": "وحدات تكييف مجمعة — مطعم ولاونج عنب بيروت"
-      },
-      {
-        "en": "Firefighting system — ENAB Restaurant & Lounge",
-        "ar": "نظام مكافحة الحريق — مطعم ولاونج عنب"
-      },
-      {
-        "en": "Gas system — Spanish Restaurant & Lounge",
-        "ar": "نظام الغاز — المطعم والاونج الإسباني"
-      },
-      {
-        "en": "HVAC, firefighting & electrical — Sky Lounge",
-        "ar": "التكييف ومكافحة الحريق والكهرباء — سكاي لاونج"
-      }
-    ],
-    "featured": true
-  },
-  {
     "id": "prince-sultan-cardiac-center",
     "name": {
       "en": "Prince Sultan Cardiac Center",
