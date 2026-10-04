@@ -626,20 +626,20 @@
     S.draft.phoneDigits = String(S.draft.phone || '').replace(/\D/g, '');
     const data = clone(S.draft);
     render();
-    if (await saveFile('settings', data, t('saved'))) S.dirty = false;
-    S.draft = clone(S.content.settings.data);
+    if (await saveFile('settings', data, t('saved'))) { S.dirty = false; S.draft = clone(S.content.settings.data); }
     render();
   }
 
   async function submitPages() {
-    const fields = PAGE_FORMS[S.pageTab].fields;
-    const miss = missingRequired(fields);
-    if (miss) return toast(t('required') + miss, 'err');
+    // every tab is saved together, so check them all and jump to the one that needs attention
+    for (const k of [S.pageTab, ...Object.keys(PAGE_FORMS)]) {
+      const miss = missingRequired(PAGE_FORMS[k].fields);
+      if (miss) { S.pageTab = k; render(); return toast(`${t('required')}${miss} (${t(`pg_${k}`)})`, 'err'); }
+    }
     for (const k of Object.keys(PAGE_FORMS)) cleanDraft(PAGE_FORMS[k].fields);
     const data = clone(S.draft);
     render();
-    if (await saveFile('pages', data, t('saved'))) S.dirty = false;
-    S.draft = clone(S.content.pages.data);
+    if (await saveFile('pages', data, t('saved'))) { S.dirty = false; S.draft = clone(S.content.pages.data); }
     render();
   }
 
