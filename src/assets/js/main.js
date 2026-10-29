@@ -168,6 +168,18 @@
     });
   }
 
+  // Map: only pull the Google embed when the visitor asks for it
+  const mapBtn = document.querySelector('.map-load');
+  if (mapBtn) mapBtn.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.className = 'map';
+    f.loading = 'lazy';
+    f.title = mapBtn.dataset.title;
+    f.referrerPolicy = 'no-referrer-when-downgrade';
+    f.src = mapBtn.dataset.map;
+    mapBtn.replaceWith(f);
+  }, { once: true });
+
   const yr = document.querySelector('[data-year]');
   if (yr) yr.textContent = new Date().getFullYear();
 })();

@@ -177,7 +177,7 @@ def head(lang, page, title, desc, a):
 <link rel="apple-touch-icon" href="{a}assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400;500;600;700&{'family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&' if lang == 'ar' else ''}display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400;600;700&{'family=IBM+Plex+Sans+Arabic:wght@400;600;700&' if lang == 'ar' else ''}display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{a}assets/css/main.css">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
@@ -641,8 +641,11 @@ def page_contact(lang, a):
         <div>{ic_pin}<div><small>{L(('Head office', 'المقر الرئيسي'))}</small><b>{addr(L)}</b>{f'<span class="nat-addr">{L(("National Address", "العنوان الوطني"))}: <bdi>{SHORT_ADDRESS}</bdi></span>' if SHORT_ADDRESS else ''}</div></div>
         <div>{ic_clock}<div><small>{L(('Working hours', 'ساعات العمل'))}</small><b>{L(HOURS)}</b></div></div>
       </div>
-      <iframe class="map" title="{L(('Office location map', 'خريطة موقع المكتب'))}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q={MAP_Q}&z=15&output=embed"></iframe>
+      <button type="button" class="map-load" data-title="{L(('Office location map', 'خريطة موقع المكتب'))}"
+        data-map="https://maps.google.com/maps?q={MAP_Q}&amp;z=15&amp;output=embed">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0114 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <span>{L(('Show map', 'عرض الخريطة'))}</span><small>{L(('Loads Google Maps', 'يتم تحميل خرائط جوجل'))}</small>
+      </button>
     </div>
     <form class="form reveal" data-delay="1" data-endpoint="https://formsubmit.co/ajax/{EMAIL_1}" data-mailto="{EMAIL_1},{EMAIL_2}"
       data-sending="{L(('Sending…', 'جارٍ الإرسال…'))}" data-ok="{L(('Thank you — your message has been sent. We will be in touch shortly.', 'شكراً لك — تم إرسال رسالتك وسنتواصل معك قريباً.'))}"
