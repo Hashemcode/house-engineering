@@ -638,3 +638,43 @@ html[lang="ar"] .field label{letter-spacing:0;font-size:14px}
   .form{padding:26px 20px;gap:16px}
   .form .btn{width:100%;justify-content:center}
 }
+/* ---------- Arabic typography: room for descenders ----------
+   Arabic glyphs drop well below the Latin baseline; the display
+   line-heights tuned for Latin were slicing them off. */
+html[lang="ar"] .display{line-height:1.38}
+html[lang="ar"] .h1{line-height:1.22}
+html[lang="ar"] .hero h1 .line{padding-bottom:.16em}
+html[lang="ar"] .h3,
+html[lang="ar"] .card h3,
+html[lang="ar"] .disc-item h3,
+html[lang="ar"] .step h3,
+html[lang="ar"] .value h3,
+html[lang="ar"] .office h3,
+html[lang="ar"] .svc-body h2,
+html[lang="ar"] .sig-list b,
+html[lang="ar"] .hero-stats b,
+html[lang="ar"] .stamp b,
+html[lang="ar"] .tl b,
+html[lang="ar"] .mobile-menu a{line-height:1.4}
+html[lang="ar"] .foot-mega{line-height:1.5}
+html[lang="ar"] .quote-band blockquote p{line-height:1.75}
+/* page-hero headlines sit tighter than the home hero; Arabic needs the room */
+html[lang="ar"] .h1{line-height:1.32}
+html[lang="ar"] .page-hero h1{padding-bottom:.06em}
+
+/* ---------- Mobile polish: legible labels, 44px tap targets ---------- */
+@media (max-width:640px){
+  .eyebrow{font-size:12px;letter-spacing:.16em}
+  .hero-stats span{font-size:12px}
+  .stamp span,.office .tag,.card .client{font-size:12px}
+  .card-loc{font-size:12px}
+  .foot-grid h4{font-size:13px}
+  .foot-grid a{display:inline-block;padding:10px 0}
+  .crumbs a{display:inline-block;padding:11px 0}
+  .foot-contact li{padding-block:5px}
+  .lang{padding:12px 16px}
+  .scope-toggle{min-height:44px}
+  .office a,.contact-cards b{display:inline-block;padding-block:6px;line-height:1.5}
+  .contact-cards>a,.contact-cards>div{padding-block:20px}
+  .svc-index a{padding:11px 16px}
+}

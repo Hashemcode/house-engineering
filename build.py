@@ -78,6 +78,34 @@ TOTAL_PROJECTS = len(_projects)
 PG = load("pages")  # editable page wording, photos and section switches
 
 
+THUMBS = {}  # full-size image -> small variant, filled in by make_thumbs()
+
+
+def make_thumbs(width=280):
+    """Shrink the discipline-list images; they render ~60px wide on phones."""
+    try:
+        from PIL import Image
+    except ImportError:
+        print("Pillow not installed - serving full-size images")
+        return
+    out = DIST / "assets" / "img" / "thumbs"
+    out.mkdir(parents=True, exist_ok=True)
+    for s in SERVICES:
+        src = DIST / "assets" / "img" / s["img"]
+        if not src.exists():
+            continue
+        try:
+            im = Image.open(src).convert("RGB")
+        except Exception:
+            continue
+        if im.width <= width:
+            continue
+        im.thumbnail((width, width * 3), Image.LANCZOS)
+        dest = out / (Path(s["img"]).stem + ".webp")
+        im.save(dest, "WEBP", quality=78)
+        THUMBS[s["img"]] = f"thumbs/{dest.name}"
+
+
 def img_name(f):
     return html.escape(str(f or "").strip())
 
@@ -316,7 +344,7 @@ def sectors_html(lang):
 def page_index(lang, a):
     L = tr(lang)
     disc_items = "".join(f"""<li class="disc-item" data-caption="{L(s['short'])}"><a href="services.html#{s['id']}">
-  <span class="num">{i + 1:02d}</span><img class="disc-thumb" src="{a}assets/img/{html.escape(s['img'])}" alt="" loading="lazy" style="object-position:{html.escape(s['pos'])}"><span><h3>{L(s['t'])}</h3><span class="tags">{L(s['tags'])}</span></span><span class="arrow">{ARROW}</span></a></li>"""
+  <span class="num">{i + 1:02d}</span><img class="disc-thumb" src="{a}assets/img/{html.escape(THUMBS.get(s['img'], s['img']))}" alt="" loading="lazy" style="object-position:{html.escape(s['pos'])}"><span><h3>{L(s['t'])}</h3><span class="tags">{L(s['tags'])}</span></span><span class="arrow">{ARROW}</span></a></li>"""
                          for i, s in enumerate(SERVICES))
     disc_imgs = "".join(f'<img src="{a}assets/img/{html.escape(s["img"])}" alt="" loading="lazy" style="object-position:{html.escape(s["pos"])}">' for s in SERVICES)
     rail = "".join(project_card(lang, a, p) for p in ([p for p in PROJECTS if p["featured"]] or PROJECTS)[:12])
@@ -654,6 +682,7 @@ def build():
     shutil.copytree(SRC / "assets", DIST / "assets")
     if (SRC / "admin").exists():
         shutil.copytree(SRC / "admin", DIST / "admin")
+    make_thumbs()
     for lang, out, a in (("en", DIST, ""), ("ar", DIST / "ar", "../")):
         out.mkdir(parents=True, exist_ok=True)
         for page, fn in PAGES.items():
