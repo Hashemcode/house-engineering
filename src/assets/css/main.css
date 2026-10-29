@@ -14,6 +14,7 @@
   --mute:#8fa2b0;
   --mute-dark:#5b6b76;
   --cyan:#0198cb;
+  --cyan-text:#096a8c;  /* small text on any light surface */
   --cyan-deep:#0a7398;  /* passes WCAG AA behind white text and as small text on paper */
   --cyan-2:#3fc0ef;
   --cyan-glow:rgba(10,155,214,.35);
@@ -166,7 +167,7 @@ html[lang="ar"] .hero-stats span{letter-spacing:0;font-size:14px}
 .section{position:relative;padding-block:clamp(90px,12vw,180px)}
 .section.light{background:var(--paper);color:var(--ink)}
 .section.light .lead{color:#3c4a54}
-.section.light .eyebrow{color:var(--cyan-deep)}
+.section.light .eyebrow{color:var(--cyan-text)}
 .section.light .accent,.statement-text .accent,.office h3 .accent{color:var(--cyan-deep)}
 .section.steel{background:var(--ink-2)}
 .sec-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,110px);align-items:end;margin-bottom:clamp(50px,7vw,100px)}
@@ -686,3 +687,5 @@ html[lang="ar"] .page-hero h1{padding-bottom:.06em}
 .map-load:hover{border-color:var(--cyan);background:var(--steel)}
 .map-load svg{width:30px;height:30px;stroke:var(--cyan-2);fill:none;stroke-width:1.5}
 .map-load small{font-weight:500;font-size:13px;color:var(--mute)}
+
+.office .tag{color:var(--cyan-deep)}
